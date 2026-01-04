@@ -1,0 +1,26 @@
+[
+    {
+        "meta": "ERP REDESIGN",
+        "title": "Revamping Duxbe's POS System for a Modern User Experience",
+        "description": "The redesign enhances visual clarity, improves workflow efficiency, and aligns the interface with modern design standards",
+        "image": "public/duxbe.png"
+    },
+    {
+        "meta": "FIRST UX PROJECT",
+        "title": "Redesigning the experience of Total Campus Solution",
+        "description": "A UX-focused redesign aimed at improving feature discoverability, streamlining user flows, and enhancing the overall usability of the B2C mobile application.",
+        "image": "public/tcs.png"
+    },
+    {
+        "meta": "TALENT DISCOVERY APP",
+        "title": "A platform to connect aspiring performers with directors and industry professionals.",
+        "description": "A platform connecting performers with casting professionals through video reels, portfolios, and opportunities.",
+        "image": "public/dreamact.png"
+    },
+    {
+        "meta": "BRAND WEBSITE",
+        "title": "Enhancing the digital presence of Nolta",
+        "description": "Modern, responsive website that clearly communicates Nolta’s brand, services, and digital presence",
+        "image": "public/nolta.png"
+    }
+]
