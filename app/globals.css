@@ -103,6 +103,31 @@ body {
 /* Dot Matrix Grid Background */
 .dot-matrix-grid {
   background-image: radial-gradient(circle, var(--color-17-17-17-70) 1px, transparent 1px);
-  background-size: 24px 24px;
+  background-size: 16px 16px;
   background-position: 0 0;
+}
+
+@media (min-width: 640px) {
+  .dot-matrix-grid {
+    background-size: 20px 20px;
+  }
+}
+
+@media (min-width: 768px) {
+  .dot-matrix-grid {
+    background-size: 24px 24px;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 639px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 640px) and (max-width: 767px) {
+  html {
+    font-size: 15px;
+  }
 }

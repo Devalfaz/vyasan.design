@@ -249,3 +249,4 @@ firebase hosting:clone SOURCE_SITE_ID:SOURCE_CHANNEL_ID TARGET_SITE_ID:live
 **Firebase CLI**: 15.1.0
 **Deployment Type**: Static Export
 
+

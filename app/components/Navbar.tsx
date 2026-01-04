@@ -6,7 +6,7 @@ export default function Navbar() {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-[var(--color-light-bg)]/80 backdrop-blur-md shadow-[0_1px_20px_rgba(0,0,0,0.03)]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          {/* Left side - Navigation items */}
+          {/* Left side - Logo */}
           <div className="flex items-center">
             <Image
               src="/logo.svg"
@@ -14,26 +14,27 @@ export default function Navbar() {
               width={193}
               height={33}
               priority
+              className="w-32 sm:w-40 md:w-48 h-auto"
             />
           </div>
 
-          {/* Right side - Logo */}
-          <div className="flex items-center space-x-8">
+          {/* Right side - Navigation */}
+          <div className="flex items-center space-x-4 sm:space-x-6 md:space-x-8">
             <Link
               href="#home"
-              className="nav-menu text-[#171717] hover:text-[var(--color-primary)] transition-colors"
+              className="nav-menu text-[#171717] hover:text-[var(--color-primary)] transition-colors text-sm sm:text-base"
             >
               Home
             </Link>
             <Link
               href="#work"
-              className="nav-menu text-[#171717] hover:text-[var(--color-primary)] transition-colors"
+              className="nav-menu text-[#171717] hover:text-[var(--color-primary)] transition-colors text-sm sm:text-base"
             >
               Work
             </Link>
             <Link
               href="#about"
-              className="nav-menu text-[#171717] hover:text-[var(--color-primary)] transition-colors"
+              className="nav-menu text-[#171717] hover:text-[var(--color-primary)] transition-colors text-sm sm:text-base"
             >
               About
             </Link>
