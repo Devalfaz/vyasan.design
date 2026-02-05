@@ -8,32 +8,34 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16">
           {/* Left side - Logo */}
           <div className="flex items-center">
-            <Image
-              src="/logo.svg"
-              alt="Logo"
-              width={193}
-              height={33}
-              priority
-              className="w-32 sm:w-40 md:w-48 h-auto"
-            />
+            <Link href="/">
+              <Image
+                src="/logo.svg"
+                alt="Logo"
+                width={193}
+                height={33}
+                priority
+                className="w-32 sm:w-40 md:w-48 h-auto cursor-pointer"
+              />
+            </Link>
           </div>
 
           {/* Right side - Navigation */}
           <div className="flex items-center space-x-4 sm:space-x-6 md:space-x-8">
             <Link
-              href="#home"
+              href="/"
               className="nav-menu text-[#171717] hover:text-[var(--color-primary)] transition-colors text-sm sm:text-base"
             >
               Home
             </Link>
             <Link
-              href="#work"
+              href="/#work"
               className="nav-menu text-[#171717] hover:text-[var(--color-primary)] transition-colors text-sm sm:text-base"
             >
               Work
             </Link>
             <Link
-              href="#about"
+              href="/about"
               className="nav-menu text-[#171717] hover:text-[var(--color-primary)] transition-colors text-sm sm:text-base"
             >
               About
