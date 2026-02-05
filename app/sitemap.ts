@@ -1,6 +1,6 @@
 import { MetadataRoute } from "next";
 
-export const dynamic = 'force-static';
+export const dynamic = "force-static";
 
 export default function sitemap(): MetadataRoute.Sitemap {
     return [
@@ -23,10 +23,34 @@ export default function sitemap(): MetadataRoute.Sitemap {
             priority: 0.8,
         },
         {
-            url: "https://vyasan.design#about",
+            url: "https://vyasan.design/about",
             lastModified: new Date(),
             changeFrequency: "monthly",
             priority: 0.7,
+        },
+        {
+            url: "https://vyasan.design/work/tcs",
+            lastModified: new Date(),
+            changeFrequency: "monthly",
+            priority: 0.8,
+        },
+        {
+            url: "https://vyasan.design/work/duxbe",
+            lastModified: new Date(),
+            changeFrequency: "monthly",
+            priority: 0.8,
+        },
+        {
+            url: "https://vyasan.design/work/dreamact",
+            lastModified: new Date(),
+            changeFrequency: "monthly",
+            priority: 0.8,
+        },
+        {
+            url: "https://vyasan.design/work/nolta",
+            lastModified: new Date(),
+            changeFrequency: "monthly",
+            priority: 0.8,
         },
     ];
 }

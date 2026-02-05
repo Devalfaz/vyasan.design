@@ -93,35 +93,67 @@ export default function Home() {
                     <p className="text-sm sm:text-base md:text-lg text-[var(--color-secondary-text)] mb-4 sm:mb-5 md:mb-6 leading-relaxed" itemProp="description">
                       {project.description}
                     </p>
-                    <button
-                      type="button"
-                      className="flex items-center gap-2 text-sm sm:text-base text-[var(--color-17-17-17)] hover:text-[var(--color-primary)] transition-colors cursor-pointer"
-                      aria-label={`View ${project.title} case study`}
-                    >
-                      <span>View case study</span>
-                      <svg
-                        width="19"
-                        height="19"
-                        viewBox="0 0 19 19"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                        className="stroke-current w-4 h-4 sm:w-5 sm:h-5"
-                        aria-hidden="true"
+                    {"caseStudyHref" in project && project.caseStudyHref ? (
+                      <Link
+                        href={project.caseStudyHref}
+                        className="inline-flex items-center gap-2 text-sm sm:text-base text-[var(--color-17-17-17)] hover:text-[var(--color-primary)] transition-colors"
+                        aria-label={`View ${project.title} case study`}
                       >
-                        <path
-                          d="M5.54175 13.4583L13.4584 5.54166"
-                          strokeWidth="2"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        />
-                        <path
-                          d="M5.54175 5.54166H13.4584V13.4583"
-                          strokeWidth="2"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        />
-                      </svg>
-                    </button>
+                        <span>View case study</span>
+                        <svg
+                          width="19"
+                          height="19"
+                          viewBox="0 0 19 19"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                          className="stroke-current w-4 h-4 sm:w-5 sm:h-5"
+                          aria-hidden="true"
+                        >
+                          <path
+                            d="M5.54175 13.4583L13.4584 5.54166"
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          />
+                          <path
+                            d="M5.54175 5.54166H13.4584V13.4583"
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          />
+                        </svg>
+                      </Link>
+                    ) : (
+                      <button
+                        type="button"
+                        className="flex items-center gap-2 text-sm sm:text-base text-[var(--color-17-17-17)] hover:text-[var(--color-primary)] transition-colors cursor-pointer"
+                        aria-label={`View ${project.title} case study`}
+                      >
+                        <span>View case study</span>
+                        <svg
+                          width="19"
+                          height="19"
+                          viewBox="0 0 19 19"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                          className="stroke-current w-4 h-4 sm:w-5 sm:h-5"
+                          aria-hidden="true"
+                        >
+                          <path
+                            d="M5.54175 13.4583L13.4584 5.54166"
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          />
+                          <path
+                            d="M5.54175 5.54166H13.4584V13.4583"
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          />
+                        </svg>
+                      </button>
+                    )}
                   </div>
 
                   {/* Image Column */}
