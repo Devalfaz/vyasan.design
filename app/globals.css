@@ -11,6 +11,8 @@
   --color-2a-2a-2e: #2A2A2E;
   --color-17-17-17: #171717;
   --color-17-17-17-70: #17171742;
+  --color-primary-900: #873C0E;
+  --text-color: #344054;
 }
 
 @theme inline {
@@ -24,6 +26,7 @@
   --color-17-17-17: var(--color-17-17-17);
   --color-17-17-17-70: var(--color-17-17-17-70);
   --font-sans: var(--font-inter);
+  --text-color: var(--text-color);
 }
 
 html {
