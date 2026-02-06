@@ -27,30 +27,31 @@ export default function NoltaPage() {
             top: "0%",
             height: "600px",
             background:
-              "radial-gradient(circle at center top, rgba(253, 133, 58, 0.08) 0%, rgba(253, 248, 245, 0.3) 50%, transparent 100%)",
+              "radial-gradient(circle at center top, rgba(20, 195, 163, 0.1) 0%, rgba(253, 248, 245, 0.3) 50%, transparent 100%)",
           }}
         />
-        <div className="max-w-5xl mx-auto relative z-10 text-center">
+        <div className="max-w-6xl mx-auto relative z-10 text-center">
           <AnimateOnScroll animation="fade-in-down">
-            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[var(--color-17-17-17)] mb-4 leading-tight">
-              Enhancing the digital presence of{" "}
-              <span className="text-[var(--color-primary)]">Nolta</span>
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-[var(--color-17-17-17)] mb-6 leading-tight">
+              Designing a Clean, Sustainable
+              <br className="hidden sm:block" />
+              Website for <span className="text-[#00D2B4]">Nolta</span>
             </h1>
           </AnimateOnScroll>
           <AnimateOnScroll animation="fade-in" delay={100}>
-            <p className="text-base sm:text-lg text-[var(--color-secondary-text)] max-w-2xl mx-auto mb-12">
-              A modern, responsive website that clearly communicates Nolta&apos;s brand, services, and digital presence
+            <p className="body-default text-[var(--color-secondary-text)] mb-12">
+              Brand Website* 2024
             </p>
           </AnimateOnScroll>
           <AnimateOnScroll animation="scale-in" delay={200}>
-            <div className="rounded-2xl overflow-hidden shadow-xl max-w-4xl mx-auto">
-              <div className="relative w-full aspect-video">
+            <div className="rounded-2xl overflow-hidden shadow-2xl bg-white">
+              <div className="relative w-full aspect-[16/9]">
                 <Image
                   src={NOLTA_IMAGES[0]}
-                  alt="Nolta website"
+                  alt="Nolta website hero"
                   fill
                   className="object-cover"
-                  sizes="(max-width: 1024px) 100vw, 1024px"
+                  sizes="(max-width: 1280px) 100vw, 1280px"
                   priority
                 />
               </div>
@@ -60,97 +61,110 @@ export default function NoltaPage() {
       </section>
 
       {/* Overview & Project Details - Dark */}
-      <section className="py-16 sm:py-20 bg-[#2D2B2C] text-white">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 lg:gap-12">
-            <div className="lg:col-span-2">
-              <AnimateOnScroll animation="fade-in-right">
-                <h2 className="text-2xl sm:text-3xl font-semibold mb-6">Overview</h2>
-                <div className="space-y-4 text-[#d0d0d0] text-base sm:text-lg leading-relaxed">
-                  <p>
-                    Nolta Cookware needed a refreshed digital presence to reflect the quality and warmth of their brand. The goal was to create a website that speaks to home cooks and families—emphasizing craftsmanship, ease of use, and the role of cooking in bringing people together.
-                  </p>
-                  <p>
-                    The new site showcases Nolta&apos;s product range, communicates their values, and provides a clear path for customers to explore collections and get in touch—all with a responsive, accessible experience.
-                  </p>
-                </div>
-              </AnimateOnScroll>
-            </div>
-            <AnimateOnScroll animation="fade-in-left" delay={100}>
-              <div className="bg-[#8B5A3C] rounded-2xl p-6 sm:p-8 text-white space-y-6">
-                <div>
-                  <h3 className="text-sm font-semibold uppercase tracking-wider opacity-90 mb-2">Role</h3>
-                  <p className="text-lg">Brand & Web Design</p>
-                </div>
-                <div>
-                  <h3 className="text-sm font-semibold uppercase tracking-wider opacity-90 mb-2">Deliverables</h3>
-                  <p className="text-sm leading-relaxed">Visual identity, Web design, Responsive UI</p>
-                </div>
-                <div>
-                  <h3 className="text-sm font-semibold uppercase tracking-wider opacity-90 mb-2">Client</h3>
-                  <p className="text-lg">Nolta Cookware</p>
-                </div>
-              </div>
-            </AnimateOnScroll>
-          </div>
-        </div>
-      </section>
-
-      {/* A Message from Us - Two columns, light peach */}
-      <section className="py-16 sm:py-20 bg-[#FDF0E8]">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 items-center">
+      <section className="py-16 sm:py-20 bg-[#272727] text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-8 flex flex-col lg:flex-row gap-12">
+          {/* Main content */}
+          <div className="flex-1">
             <AnimateOnScroll animation="fade-in-right">
-              <div>
-                <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-[var(--color-17-17-17)] mb-8 italic">
-                  A Message from Us
-                </h2>
-                <div className="space-y-6 text-[var(--color-17-17-17)] text-base sm:text-lg leading-relaxed">
-                  <p>
-                    At Nolta Cookware, we believe cooking is more than a daily task—it&apos;s an art and a way to connect with the people you love. Our products are designed to help you create moments and memories around the table, from everyday meals to special celebrations.
-                  </p>
-                  <p>
-                    We believe in the magic of the kitchen and are committed to making your cooking experience effortless and enjoyable. Every piece we create is crafted with care so you can focus on what matters: the food, the conversation, and the joy of sharing.
-                  </p>
-                  <p>
-                    Thank you for choosing Nolta Cookware. We&apos;re honored to be part of your kitchen—here&apos;s to creating something extraordinary.
-                  </p>
-                </div>
-                <p className="mt-8 font-bold text-[var(--color-17-17-17)]">Happy Cooking,</p>
-                <p className="font-bold text-[var(--color-17-17-17)]">The Nolta Cookware Team</p>
-              </div>
-            </AnimateOnScroll>
-            <AnimateOnScroll animation="fade-in-left" delay={100}>
-              <div className="rounded-2xl overflow-hidden bg-gradient-to-b from-[#d4edda] to-white shadow-lg">
-                <div className="relative w-full aspect-[4/5]">
-                  <Image
-                    src={NOLTA_IMAGES[1]}
-                    alt="Nolta cookware"
-                    fill
-                    className="object-contain object-center p-6"
-                    sizes="(max-width: 768px) 100vw, 50vw"
-                  />
-                </div>
+              <h2 className="h2-section mb-6">Overview</h2>
+              <div className="space-y-5 text-[#e0e0e0] body-large leading-relaxed">
+                <p>
+                  Nolta is a premium cookware and homeware brand offering non-toxic, PFOA-free products for healthier everyday cooking. For this project, I handled the complete website experience—from discovery and content structure to visual design and final build—ensuring the brand’s quality and sustainability were clearly reflected online.
+                </p>
+                <h2 className="h2-section mt-12 mb-6">Challenge</h2>
+                <p>
+                  The main challenge was creating a website that clearly reflects Nolta’s focus on healthy, sustainable, and high-quality products while still feeling modern and approachable. The site needed to communicate Nolta’s premium values and innovation, while presenting technical and environmental details in a simple, engaging way for everyday users.
+                </p>
               </div>
             </AnimateOnScroll>
           </div>
+
+          {/* Side card */}
+          <AnimateOnScroll animation="fade-in-left" delay={100}>
+            <aside className="w-full max-w-sm bg-[#8B4513] rounded-2xl p-6 sm:p-8 text-white flex flex-col space-y-6 shadow-lg self-start border border-white/10">
+              <div>
+                <h3 className="h4-subheading uppercase tracking-wider opacity-90 mb-2">Duration</h3>
+                <p className="nav-menu">1 Week</p>
+              </div>
+              <div>
+                <h3 className="h4-subheading uppercase tracking-wider opacity-90 mb-2">My Role</h3>
+                <p className="nav-menu">UX/UI Designer</p>
+              </div>
+              <div>
+                <h3 className="h4-subheading uppercase tracking-wider opacity-90 mb-2">Deliverables</h3>
+                <p className="nav-menu">
+                  Workflows, Wireframes, Visual and Interaction design
+                </p>
+              </div>
+              <div>
+                <h3 className="h4-subheading uppercase tracking-wider opacity-90 mb-2">Client</h3>
+                <p className="nav-menu">Kottaram Agency</p>
+              </div>
+            </aside>
+          </AnimateOnScroll>
         </div>
       </section>
 
-      {/* Visual / Product section */}
-      <section className="py-16 sm:py-20 bg-[#FDF8F5]">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Design Process - Light */}
+      <section className="py-16 sm:py-20 bg-[#F9F7F4]">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimateOnScroll animation="fade-in-down">
-            <h2 className="text-2xl sm:text-3xl font-semibold text-[var(--color-17-17-17)] mb-10 text-center">
-              Brand & digital experience
+            <h2 className="text-3xl sm:text-4xl font-bold text-[#374151] mb-8">
+              Design Process
             </h2>
           </AnimateOnScroll>
+          <AnimateOnScroll animation="fade-in-up">
+            <p className="body-large text-[var(--color-secondary-text)] leading-relaxed text-lg">
+              The design process focused on creating a clear and intuitive user experience that reflects Nolta’s eco-conscious values and premium quality. Strong information hierarchy and simple navigation were used to help users quickly understand the product range and key benefits. Technical and sustainability details were broken down into easy-to-digest sections to reduce cognitive load. Consistent color, typography, and spacing were applied to build trust and reinforce a sense of quality. High-quality imagery supported decision-making by clearly showcasing product design, materials, and ergonomic features.
+            </p>
+          </AnimateOnScroll>
+        </div>
+      </section>
+
+      {/* Process - Dark */}
+      <section className="py-16 sm:py-20 bg-[#272727] text-white rounded-t-2xl">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <AnimateOnScroll animation="fade-in-down">
+            <h2 className="h2-section text-center mb-6 text-white">Process</h2>
+          </AnimateOnScroll>
+          <AnimateOnScroll animation="fade-in-up">
+            <p className="body-large text-[var(--color-b3-b3-b3)] max-w-2xl mx-auto text-center mb-10">
+              The design process centered on creating a clear and intuitive experience that communicates Nolta&apos;s eco-conscious values.
+            </p>
+          </AnimateOnScroll>
           <AnimateOnScroll animation="scale-in">
-            <div className="rounded-2xl overflow-hidden shadow-xl">
-              <div className="relative w-full aspect-[16/10]">
+            <div className="rounded-2xl overflow-hidden shadow-lg">
+              <div className="relative w-full aspect-video">
+                <Image
+                  src={NOLTA_IMAGES[1]}
+                  alt="Process - One Story, One Mission"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 1024px"
+                />
+              </div>
+            </div>
+          </AnimateOnScroll>
+        </div>
+      </section>
+
+      {/* Goals - Dark */}
+      <section className="py-16 sm:py-20 bg-[#272727] text-white border-t border-[#B3B3B3]">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <AnimateOnScroll animation="fade-in-down">
+            <h2 className="h2-section text-center mb-6 text-white">Goals</h2>
+          </AnimateOnScroll>
+          <AnimateOnScroll animation="fade-in-up">
+            <p className="body-large text-[var(--color-b3-b3-b3)] max-w-2xl mx-auto text-center mb-10">
+              The goal was to create a simple, intuitive experience that clearly represents Nolta&apos;s commitment to sustainability.
+            </p>
+          </AnimateOnScroll>
+          <AnimateOnScroll animation="scale-in">
+            <div className="rounded-2xl overflow-hidden shadow-lg">
+              <div className="relative w-full aspect-video">
                 <Image
                   src={NOLTA_IMAGES[2]}
-                  alt="Nolta brand and website"
+                  alt="Goals - A Message from Us"
                   fill
                   className="object-cover"
                   sizes="(max-width: 1024px) 100vw, 1024px"
@@ -161,7 +175,7 @@ export default function NoltaPage() {
           <AnimateOnScroll animation="fade-in-up" delay={100}>
             <Link
               href="/#work"
-              className="inline-flex items-center gap-2 mt-10 text-[var(--color-primary)] font-medium hover:underline"
+              className="inline-flex items-center gap-2 mt-12 text-white font-medium hover:text-[var(--color-primary)] transition-colors body-large"
             >
               ← Back to Work
             </Link>
