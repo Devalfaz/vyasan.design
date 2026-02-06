@@ -13,6 +13,7 @@
   --color-17-17-17-70: #17171742;
   --color-primary-900: #873C0E;
   --text-color: #344054;
+  --color-blue-primary: #00B5FF;
 }
 
 @theme inline {
@@ -27,6 +28,7 @@
   --color-17-17-17-70: var(--color-17-17-17-70);
   --font-sans: var(--font-inter);
   --text-color: var(--text-color);
+  --color-blue-primary: var(--color-blue-primary);
 }
 
 html {

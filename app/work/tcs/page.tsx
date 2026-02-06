@@ -142,18 +142,18 @@ export default function TotalCampusSolutionPage() {
             </p>
           </AnimateOnScroll>
         </div>
-      <div className="flex justify-center mt-12">
-        <div className="relative w-full" style={{ height: 1363 }}>
-          <Image
-            src={TCS_IMAGES[1]}
-            alt="Research Findings"
-            fill
-            className=""
-            sizes="(max-width: 768px) 100vw, 800px"
-            style={{ objectFit: 'contain' }}
-          />
+        <div className="flex justify-center mt-12">
+          <div className="relative w-full" style={{ height: 1363 }}>
+            <Image
+              src={TCS_IMAGES[1]}
+              alt="Research Findings"
+              fill
+              className=""
+              sizes="(max-width: 768px) 100vw, 800px"
+              style={{ objectFit: 'contain' }}
+            />
+          </div>
         </div>
-      </div>
       </section>
 
       <section className="py-16 sm:py-20 bg-[#FABE9815]">
@@ -353,6 +353,14 @@ export default function TotalCampusSolutionPage() {
               <p className="body-large text-[var(--text-color)] leading-relaxed">
                 I&apos;m always open to learning and improving, so if you notice anything that could be done better or have alternative ideas, I&apos;d truly appreciate your feedback.
               </p>
+            </AnimateOnScroll>
+            <AnimateOnScroll animation="fade-in-up" delay={200}>
+              <Link
+                href="/#work"
+                className="inline-flex items-center gap-2 mt-4 text-[var(--color-primary)] font-medium hover:underline"
+              >
+                ← Back to Work
+              </Link>
             </AnimateOnScroll>
           </div>
         </div>

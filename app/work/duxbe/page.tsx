@@ -16,6 +16,7 @@ const DUXBE_IMAGES = [
   "/duxbe/duxbe5.png",
   "/duxbe/duxbe6.png",
   "/duxbe/duxbe7.png",
+  "/duxbe/duxbe8.png",
 ] as const;
 
 export default function DuxbePage() {
@@ -24,29 +25,30 @@ export default function DuxbePage() {
       <Navbar />
 
       {/* Hero - Light */}
+      {/* Hero - Light */}
       <section className="pt-28 pb-20 px-4 relative overflow-hidden bg-[#F9F7F4]">
-        <div className="max-w-5xl mx-auto relative z-10">
+        <div className="max-w-5xl mx-auto relative z-10 text-center">
           <AnimateOnScroll animation="fade-in-down">
-            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[var(--color-17-17-17)] mb-6 leading-tight max-w-3xl">
-              Product designing for{" "}
-              <span className="text-[#6366f1]">better user experience</span>{" "}
-              Of Duxbe System
-            </h1>
+            <h2 className="h2-section text-[var(--color-17-17-17)] mb-6">
+              Reimagining the <span className="text-[var(--color-blue-primary)]">Duxbe</span> Point-
+              <br className="hidden sm:block" />
+              of-Sale System
+            </h2>
           </AnimateOnScroll>
           <AnimateOnScroll animation="fade-in" delay={100}>
-            <p className="text-base sm:text-lg text-[var(--color-secondary-text)] max-w-2xl mb-12 leading-relaxed">
-              A UX/UI redesign focused on improving information hierarchy, grouping, and visual clarity for Duxbe&apos;s POS and management experience.
+            <p className="body-default text-[var(--color-secondary-text)] mb-12">
+              ERP Redesign* Jan 2024 - Dec 2025
             </p>
           </AnimateOnScroll>
           <AnimateOnScroll animation="scale-in" delay={200}>
             <div className="flex justify-center">
-              <div className="relative w-[280px] sm:w-[320px] md:w-[360px] aspect-[9/19] rounded-3xl overflow-hidden shadow-2xl border border-gray-200/80">
+              <div className="relative w-full aspect-video rounded-3xl overflow-hidden shadow-2xl border border-gray-200/80">
                 <Image
                   src={DUXBE_IMAGES[0]}
                   alt="Duxbe app dashboard"
                   fill
                   className="object-cover"
-                  sizes="360px"
+                  sizes="(max-width: 1024px) 100vw, 1024px"
                   priority
                 />
               </div>
@@ -55,145 +57,174 @@ export default function DuxbePage() {
         </div>
       </section>
 
-      {/* Overview, Goal, Core Redesign - Dark */}
-      <section className="py-16 sm:py-20 bg-[#2D2B2C] text-white">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 lg:gap-12">
-            <div className="lg:col-span-2 space-y-10">
-              <AnimateOnScroll animation="fade-in-right">
-                <div>
-                  <h2 className="text-2xl sm:text-3xl font-semibold mb-4">Overview</h2>
-                  <p className="text-[#d0d0d0] text-base sm:text-lg leading-relaxed">
-                    The Duxbe system required a comprehensive redesign to address usability and clarity issues across its POS and management interfaces. The project focused on establishing clear information hierarchy, logical grouping, and a consistent visual language.
-                  </p>
-                </div>
-              </AnimateOnScroll>
-              <AnimateOnScroll animation="fade-in-right" delay={100}>
-                <div>
-                  <h2 className="text-2xl sm:text-3xl font-semibold mb-4">Goal</h2>
-                  <p className="text-[#d0d0d0] text-base sm:text-lg leading-relaxed">
-                    To enhance visual clarity, improve workflow efficiency, and align the interface with modern design standards—enabling users to complete tasks faster and with fewer errors.
-                  </p>
-                </div>
-              </AnimateOnScroll>
-              <AnimateOnScroll animation="fade-in-right" delay={200}>
-                <div>
-                  <h2 className="text-2xl sm:text-3xl font-semibold mb-4">Core of the Redesign</h2>
-                  <p className="text-[#d0d0d0] text-base sm:text-lg leading-relaxed">
-                    Restructuring content with clear headings and sections, grouping related information into cards and modules, and applying consistent typography, spacing, and color to create a clear visual hierarchy.
-                  </p>
-                </div>
-              </AnimateOnScroll>
-            </div>
-            <AnimateOnScroll animation="fade-in-left" delay={100}>
-              <div className="bg-[#8B5A3C] rounded-2xl p-6 sm:p-8 text-white space-y-6">
-                <div>
-                  <h3 className="text-sm font-semibold uppercase tracking-wider opacity-90 mb-2">Client</h3>
-                  <p className="text-lg">Duxbe</p>
-                </div>
-                <div>
-                  <h3 className="text-sm font-semibold uppercase tracking-wider opacity-90 mb-2">Role</h3>
-                  <p className="text-lg">UX Designer, UI Designer</p>
-                </div>
-                <div>
-                  <h3 className="text-sm font-semibold uppercase tracking-wider opacity-90 mb-2">Timeline</h3>
-                  <p className="text-lg">2 Months</p>
-                </div>
-                <div>
-                  <h3 className="text-sm font-semibold uppercase tracking-wider opacity-90 mb-2">Tools</h3>
-                  <p className="text-lg">Figma</p>
-                </div>
+      {/* Overview & Goal - Dark */}
+      <section className="py-16 sm:py-20 bg-[#272727] text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-8 flex flex-col lg:flex-row gap-12">
+          {/* Main content */}
+          <div className="flex-1">
+            <AnimateOnScroll animation="fade-in-right">
+              <h2 className="h2-section mb-6">Overview</h2>
+              <div className="space-y-5 text-[#e0e0e0] body-large leading-relaxed">
+                <p>
+                  Duxbe is a billing solution designed to make everyday billing tasks simpler and easier for businesses. The focus was on creating a clean, user-friendly experience that helps users manage invoices, transactions, and routine billing work without unnecessary complexity.
+                </p>
+                <h3 className="h2-section mt-10 mb-2">Goal</h3>
+                <p>
+                  While working on this project, the goal was to build a system that feels intuitive and reliable, even for first-time users. By prioritizing usability and clarity,
+                </p>
+                <p>
+                  Duxbe aims to reduce errors, speed up workflows, and make billing feel less like a chore and more like a smooth, manageable process.
+                </p>
               </div>
             </AnimateOnScroll>
           </div>
+          {/* Side card */}
+          <AnimateOnScroll animation="fade-in-left" delay={100}>
+            <aside className="w-full max-w-sm bg-[var(--color-primary-900)] rounded-2xl p-6 sm:p-8 text-white flex flex-col space-y-6 shadow-lg self-start">
+              <div>
+                <h3 className="h4-subheading uppercase tracking-wider opacity-90 mb-2">Duration</h3>
+                <p className="nav-menu">12 Months</p>
+              </div>
+              <div>
+                <h3 className="h4-subheading uppercase tracking-wider opacity-90 mb-2">My Role</h3>
+                <p className="nav-menu">UX/UI Designer</p>
+              </div>
+              <div>
+                <h3 className="h4-subheading uppercase tracking-wider opacity-90 mb-2">Deliverables</h3>
+                <p className="nav-menu">
+                  Workflows, Wireframes, Visual and Interaction design
+                </p>
+              </div>
+              <div>
+                <h3 className="h4-subheading uppercase tracking-wider opacity-90 mb-2">Client</h3>
+                <p className="nav-menu underlined"><a href="#" className="hover:text-[var(--color-primary)] transition-colors underline">Hancod</a></p>
+              </div>
+            </aside>
+          </AnimateOnScroll>
         </div>
       </section>
 
       {/* Information Hierarchy Issues - Light */}
-      <section className="py-16 sm:py-20 bg-[#F9F7F4]">
+      <section className="py-16 sm:py-20 bg-[var(--color-light-bg)]">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimateOnScroll animation="fade-in-down">
-            <h2 className="text-2xl sm:text-3xl font-semibold text-[var(--color-17-17-17)] mb-12 text-center">
+            <h2 className="h2-section text-[var(--color-17-17-17)] mb-12 text-center">
               Information Hierarchy Issues
             </h2>
           </AnimateOnScroll>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              {
-                img: DUXBE_IMAGES[1],
-                title: "Information Hierarchy",
-                text: "The original interface presented menus and profiles with unclear structure, making it difficult for users to scan and find key actions or settings.",
-              },
-              {
-                img: DUXBE_IMAGES[2],
-                title: "Lack of proper Information Grouping",
-                text: "Data and statistics were displayed without clear grouping, leading to cognitive overload and slower decision-making for users.",
-              },
-              {
-                img: DUXBE_IMAGES[3],
-                title: "Lack of proper Visual Hierarchy",
-                text: "Names, statuses, and key elements lacked clear visual distinction, reducing scannability and increasing the chance of misreading information.",
-              },
-            ].map((card, i) => (
-              <AnimateOnScroll key={card.title} animation="fade-in-up" delay={i * 100}>
-                <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 flex flex-col h-full">
-                  <div className="relative aspect-[9/16] max-h-[280px] mx-auto w-full rounded-xl overflow-hidden mb-4">
-                    <Image src={card.img} alt={card.title} fill className="object-cover" sizes="(max-width: 768px) 100vw, 33vw" />
-                  </div>
-                  <h3 className="text-lg font-semibold text-[var(--color-17-17-17)] mb-2">{card.title}</h3>
-                  <p className="text-sm text-[var(--color-secondary-text)] leading-relaxed flex-1 mb-4">{card.text}</p>
-                  <Link
-                    href="#solutions"
-                    className="inline-flex items-center justify-center w-full py-3 rounded-lg bg-[#1e3a8a] text-white text-sm font-medium hover:bg-[#1e40af] transition-colors"
-                  >
-                    View Case Study
-                  </Link>
-                </div>
-              </AnimateOnScroll>
-            ))}
+          <div className="relative w-full aspect-[16/9] rounded-2xl overflow-hidden">
+            <Image
+              src={DUXBE_IMAGES[1]}
+              alt="Information Hierarchy Issues"
+              fill
+              className="object-cover"
+              sizes="(max-width: 1280px) 100vw, 1280px"
+            />
           </div>
         </div>
       </section>
 
-      {/* Information Hierarchy Solutions - Light */}
-      <section id="solutions" className="py-16 sm:py-20 bg-[#F9F7F4]">
+      {/* Detailed Issues Breakdown */}
+      <section className="py-16 sm:py-20 bg-[#F9F7F4]">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimateOnScroll animation="fade-in-down">
-            <h2 className="text-2xl sm:text-3xl font-semibold text-[var(--color-17-17-17)] mb-12 text-center">
-              Information Hierarchy Solutions
+            <h2 className="h2-section text-[var(--color-17-17-17)] mb-12 text-center">
+              Information Hierarchy Issues
             </h2>
           </AnimateOnScroll>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="space-y-16">
             {[
               {
-                img: DUXBE_IMAGES[4],
-                title: "Information Hierarchy",
-                text: "Redesigned menus and profile screens with clear categories such as Personal Info, Payment, Settings, and Help Center—each with consistent icons and spacing.",
+                number: "1",
+                title: "ITEM LIST",
+                img: DUXBE_IMAGES[2],
+                desc: "Making it difficult to quickly scan and understand inventory status. Important details and key actions lack visual priority, slowing down item management.",
+                functions: [
+                  "View all inventory items in a list.",
+                  "Check item details such as category, price, and stock.",
+                  "Access additional actions through item controls.",
+                ],
+                problems:
+                  "Too much information is shown at once, making the list difficult to scan. Important details like stock status and key actions lack visual priority, slowing down item management.",
               },
               {
-                img: DUXBE_IMAGES[5],
-                title: "Information Grouping",
-                text: "Grouped related metrics into cards and sections (e.g. Total Profit, Sales, Expenses) so users can quickly compare and act on data.",
+                number: "2",
+                title: "POS",
+                img: DUXBE_IMAGES[3],
+                desc: "Allows users to browse products and add items to the cart efficiently.",
+                functions: [
+                  "Browse available products in a grid layout.",
+                  "Search and filter products by category.",
+                  "View product details such as name, size, and price.",
+                  "Add items directly to the cart.",
+                ],
+                problems:
+                  "Clearly communicated, and prices visually overpower product details. Search and filter options feel cluttered, making browsing less intuitive.",
               },
               {
-                img: DUXBE_IMAGES[6],
-                title: "Visual Hierarchy",
-                text: "Applied distinct typography, weight, and color to product names, prices, and quantities so key information stands out at a glance.",
+                number: "3",
+                title: "Cart",
+                img: DUXBE_IMAGES[7],
+                desc: "This screen helps users review selected items, manage quantities, and prepare for checkout in one place.",
+                functions: [
+                  "Display all added items in the cart.",
+                  "Adjust item quantities using increment and decrement controls.",
+                  "Remove unwanted items from the cart.",
+                  "View the total price before checkout.",
+                ],
+                problems:
+                  "The cart layout lacks clear visual hierarchy, making it hard to scan items and prices quickly. Quantity and delete actions are not intuitive enough, increasing the chance of mistakes and slowing down checkout.",
               },
-            ].map((card, i) => (
-              <AnimateOnScroll key={card.title} animation="fade-in-up" delay={i * 100}>
-                <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 flex flex-col h-full">
-                  <div className="relative aspect-[9/16] max-h-[280px] mx-auto w-full rounded-xl overflow-hidden mb-4">
-                    <Image src={card.img} alt={card.title} fill className="object-cover" sizes="(max-width: 768px) 100vw, 33vw" />
+            ].map((item, i) => (
+              <AnimateOnScroll key={item.title} animation="fade-in-up" delay={i * 100}>
+                <div className="bg-[#F2F2F2] rounded-3xl p-6 sm:p-10 shadow-sm border border-gray-100 flex flex-col lg:flex-row gap-10 items-center">
+                  {/* Image */}
+                  <div className="flex-1 w-full relative aspect-[9/16] max-w-xs mx-auto rounded-2xl overflow-hidden bg-gray-50">
+                    <Image
+                      src={item.img}
+                      alt={item.title}
+                      fill
+                      className="object-contain p-2"
+                      sizes="(max-width: 768px) 100vw, 320px"
+                    />
                   </div>
-                  <h3 className="text-lg font-semibold text-[var(--color-17-17-17)] mb-2">{card.title}</h3>
-                  <p className="text-sm text-[var(--color-secondary-text)] leading-relaxed flex-1 mb-4">{card.text}</p>
-                  <Link
-                    href="/#work"
-                    className="inline-flex items-center justify-center w-full py-3 rounded-lg bg-[#1e3a8a] text-white text-sm font-medium hover:bg-[#1e40af] transition-colors"
-                  >
-                    View Case Study
-                  </Link>
+
+                  {/* Content */}
+                  <div className="flex-1 space-y-6">
+                    <div className="flex items-center gap-3">
+                      <span className="flex items-center justify-center w-6 h-6 rounded-full bg-black text-white text-xs font-bold">
+                        {item.number}
+                      </span>
+                      <h3 className="h4-subheading uppercase">{item.title}</h3>
+                    </div>
+
+                    <p className="body-default text-[var(--color-secondary-text)]">
+                      {item.desc}
+                    </p>
+
+                    <div>
+                      <h4 className="text-xs font-bold text-[var(--color-b3-b3-b3)] tracking-wider uppercase mb-3">
+                        FUNCTIONS
+                      </h4>
+                      <ul className="space-y-2">
+                        {item.functions.map((func, idx) => (
+                          <li key={idx} className="body-default text-[var(--color-secondary-text)] flex items-start gap-2">
+                            <span className="mt-2 w-1 h-1 rounded-full bg-[var(--color-secondary-text)] shrink-0" />
+                            {func}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+
+                    <div>
+                      <h4 className="text-xs font-bold text-[var(--color-b3-b3-b3)] tracking-wider uppercase mb-3">
+                        PROBLEMS
+                      </h4>
+                      <p className="body-default text-[var(--color-secondary-text)]">
+                        {item.problems}
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </AnimateOnScroll>
             ))}
@@ -201,25 +232,137 @@ export default function DuxbePage() {
         </div>
       </section>
 
-      {/* Takeaways - Dark */}
-      <section className="py-16 sm:py-20 bg-[#2D2B2C] text-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      {/* Goals of the Redesign */}
+      <section className="py-16 sm:py-20 bg-[#F2F2F2]">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimateOnScroll animation="fade-in-down">
-            <h2 className="text-2xl sm:text-3xl font-semibold mb-8">Takeaways</h2>
+            <h2 className="text-2xl sm:text-3xl font-semibold text-[var(--color-17-17-17)] mb-10 flex items-center gap-3">
+              <span className="text-3xl sm:text-4xl">🎯</span> Goals of the Redesign
+            </h2>
+          </AnimateOnScroll>
+          <div className="space-y-6">
+            {[
+              "Improve visual hierarchy to help users quickly scan content and identify key information.",
+              "Simplify interactions to reduce effort when adding items, adjusting quantities, and managing inventory.",
+              "Create clear and consistent action patterns across all screens for a smoother experience.",
+              "Reduce on-screen clutter by prioritizing essential information and hiding secondary details.",
+              "Make the overall experience faster, more intuitive, and easier to use on mobile devices.",
+            ].map((goal, i) => (
+              <AnimateOnScroll key={i} animation="fade-in-up" delay={i * 50}>
+                <div className="flex items-start gap-3">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[var(--color-secondary-text)] mt-2.5 shrink-0" />
+                  <p className="body-default text-[var(--color-secondary-text)]">{goal}</p>
+                </div>
+              </AnimateOnScroll>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Solutions - Item List - Dark */}
+      <section className="py-16 sm:py-20 bg-[#272727] rounded-t-2xl">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <AnimateOnScroll animation="fade-in-down">
+            <h2 className="h2-section text-center mb-6 text-white">Item List</h2>
           </AnimateOnScroll>
           <AnimateOnScroll animation="fade-in-up">
-            <p className="text-[#d0d0d0] text-base sm:text-lg leading-relaxed">
-              The redesign reinforced how critical information hierarchy and visual grouping are for complex systems. Clear sections, consistent patterns, and a focused visual hierarchy not only improved usability but also reduced training time and support needs. Iterating with real user feedback ensured the solutions matched actual workflows.
+            <p className="body-large text-[var(--color-b3-b3-b3)] max-w-2xl mx-auto text-center mb-10">
+              The item list redesign improves scannability by clearly highlighting stock status and pricing. Better filters and search make it faster and easier to find items.
             </p>
           </AnimateOnScroll>
-          <AnimateOnScroll animation="fade-in-up" delay={100}>
-            <Link
-              href="/#work"
-              className="inline-flex items-center gap-2 mt-10 text-[var(--color-primary)] font-medium hover:underline"
-            >
-              ← Back to Work
-            </Link>
+          <AnimateOnScroll animation="scale-in">
+            <div className="rounded-2xl overflow-hidden bg-[#F2F2F2] shadow-lg">
+              <div className="relative w-full aspect-video">
+                <Image
+                  src={DUXBE_IMAGES[4]}
+                  alt="Item List Redesign"
+                  fill
+                  className="object-contain p-4"
+                  sizes="(max-width: 1024px) 100vw, 1024px"
+                />
+              </div>
+            </div>
           </AnimateOnScroll>
+        </div>
+      </section>
+
+      {/* Solutions - Cart - Dark */}
+      <section className="py-16 sm:py-20 bg-[#272727] border-t border-[#B3B3B3]">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <AnimateOnScroll animation="fade-in-down">
+            <h2 className="h2-section text-center mb-6 text-white">Cart</h2>
+          </AnimateOnScroll>
+          <AnimateOnScroll animation="fade-in-up">
+            <p className="body-large text-[var(--color-b3-b3-b3)] max-w-2xl mx-auto text-center mb-10">
+              Improved structure makes it easier to review items and totals before completing payment.
+            </p>
+          </AnimateOnScroll>
+          <AnimateOnScroll animation="scale-in">
+            <div className="rounded-2xl overflow-hidden bg-[#F2F2F2] shadow-lg">
+              <div className="relative w-full aspect-video">
+                <Image
+                  src={DUXBE_IMAGES[5]}
+                  alt="Cart Redesign"
+                  fill
+                  className="object-contain p-4"
+                  sizes="(max-width: 1024px) 100vw, 1024px"
+                />
+              </div>
+            </div>
+          </AnimateOnScroll>
+        </div>
+      </section>
+
+      {/* Solutions - POS - Dark */}
+      <section className="py-16 sm:py-20 bg-[#272727] rounded-b-2xl border-t border-[#B3B3B3]">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <AnimateOnScroll animation="fade-in-down">
+            <h2 className="h2-section text-center mb-6 text-white">POS</h2>
+          </AnimateOnScroll>
+          <AnimateOnScroll animation="fade-in-up">
+            <p className="body-large text-[var(--color-b3-b3-b3)] max-w-2xl mx-auto text-center mb-10">
+              Quantity controls are placed intuitively, allowing users to add items faster and with less effort.
+            </p>
+          </AnimateOnScroll>
+          <AnimateOnScroll animation="scale-in">
+            <div className="rounded-2xl overflow-hidden bg-[#F2F2F2] shadow-lg">
+              <div className="relative w-full aspect-video">
+                <Image
+                  src={DUXBE_IMAGES[6]}
+                  alt="POS Redesign"
+                  fill
+                  className="object-contain p-4"
+                  sizes="(max-width: 1024px) 100vw, 1024px"
+                />
+              </div>
+            </div>
+          </AnimateOnScroll>
+        </div>
+      </section>
+
+      {/* Key Learnings - Light */}
+      <section className="py-16 sm:py-20 bg-[#f8f8f8] border-t border-[#B3B3B3]">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <AnimateOnScroll animation="fade-in-down">
+            <h2 className="h2-section text-[var(--color-17-17-17)] mb-8 flex items-center gap-3">
+              <span className="text-3xl sm:text-4xl">📚</span> Key Learnings
+            </h2>
+          </AnimateOnScroll>
+          <div className="space-y-6 max-w-2xl">
+            <AnimateOnScroll animation="fade-in-up">
+              <p className="body-large text-[var(--color-17-17-17)] leading-relaxed">
+                Through these redesigns, I learned that <span className="font-bold">simplifying content</span> and improving visual hierarchy greatly enhances usability. Clear placement of actions and consistent patterns help users move faster with fewer errors, especially in real-world, high-use scenarios like billing and inventory management.
+              </p>
+            </AnimateOnScroll>
+            <AnimateOnScroll animation="fade-in-up" delay={100}>
+              <Link
+                href="/#work"
+                className="inline-flex items-center gap-2 mt-4 text-[var(--color-primary)] font-medium hover:underline"
+              >
+                ← Back to Work
+              </Link>
+            </AnimateOnScroll>
+          </div>
         </div>
       </section>
 
