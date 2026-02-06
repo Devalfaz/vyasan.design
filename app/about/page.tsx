@@ -12,7 +12,7 @@ export default function About() {
   return (
     <div className="min-h-screen bg-[var(--color-light-bg)]">
       <Navbar />
-      
+
       {/* Hero Section */}
       <section className="pt-32 pb-16 px-4">
         <div className="max-w-4xl mx-auto text-center">
@@ -22,21 +22,21 @@ export default function About() {
               <span className="text-[var(--color-secondary-text)]">me.</span>
             </h1>
           </AnimateOnScroll>
-          
+
           <AnimateOnScroll animation="fade-in" delay={100}>
             <p className="text-base sm:text-lg text-[var(--color-secondary-text)] max-w-2xl mx-auto mb-12">
-              A LIFELONG FAN OF DISNEY AND MISCHIEF. STORYTELLER.
+              A brief look into my journey and what drives me.
             </p>
           </AnimateOnScroll>
-          
+
           {/* Profile Image */}
           <AnimateOnScroll animation="scale-in" delay={200}>
             <div className="flex justify-center mb-16">
               <div className="relative w-64 h-64 sm:w-80 sm:h-80 rounded-3xl overflow-hidden">
-                <Image 
-                  src="/vysn.png" 
-                  alt="Akhilvyasan" 
-                  width={400} 
+                <Image
+                  src="/vysn.png"
+                  alt="Akhilvyasan"
+                  width={400}
                   height={400}
                   className="w-full h-full object-cover"
                 />
@@ -54,23 +54,17 @@ export default function About() {
               How it all started.
             </h2>
           </AnimateOnScroll>
-          
+
           <div className="space-y-6 text-base sm:text-lg leading-relaxed">
             <AnimateOnScroll animation="fade-in-up" delay={100}>
               <p>
-                Back when I was 13-14 I accidentally came across <span className="text-[var(--color-primary)]">digital graphics</span>, I was on the idea of 'hey, this is really cool.. I wanna do lots of it', looking at so many logo designs. I was super interested, I took up the chance online to make stencils for clients and brands. We learn a lot by exposing ourself to how the real world works.
+                Back when I was 13, I discovered my passion for digital creativity. It started with photo editing on early social platforms, focusing on perfecting visuals through filters, color grading, and basic graphic design to create engaging content like small event posters. This early interest was my introduction to visual communication and attention to detail.
               </p>
             </AnimateOnScroll>
-            
+
             <AnimateOnScroll animation="fade-in-up" delay={200}>
               <p>
-                As time moved forward, I didn't just stay at UI/UX anymore, I wanted to make sure that every user experience I create resonates with the end users and meets the business goals. I delve into psychology regularly to understand how we can build things that people love to use/buy. I didn't want to just design, I wanted to shape experiences.
-              </p>
-            </AnimateOnScroll>
-            
-            <AnimateOnScroll animation="fade-in-up" delay={300}>
-              <p>
-                I have always been intrigued about bringing creative approaches to design and storytelling in every work that I do.
+                Turning 18, I found a love for creating high-impact Instagram ad posts and event promotions. This work honed my ability to understand a target audience, communicate a clear message, and design visually compelling content that drives action
               </p>
             </AnimateOnScroll>
           </div>
@@ -89,23 +83,20 @@ export default function About() {
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold mb-8 text-[var(--color-17-17-17)]">
             How college kickstarted my UX career.
           </h2>
-          
+
           <div className="space-y-6 text-base sm:text-lg leading-relaxed text-[var(--color-17-17-17)]">
             <p>
-              My college journey as MD (Multidisciplinary Design) - It became starting ground for taking the leap and decided to design thinking, UX Research and Design as I felt my skills fitting into the right space.
+              My college journey kicked off with Computer Science. Although coding didn't click for me, but my passion for <strong>digital products</strong> led me to explore UX/UI design and its impact on users and businesses.
             </p>
-            
+
             <p>
-              This foundational work set up leads into my main core journey focused on design thinking and UX. This helped to learn a lot from industry standard mentorship. Any design product project includes 2 dimensions: a design challenge, one that I love and a team (not to be taken lightly, choose wisely!).
+              This foundational work led to an internship opportunity given by my college principal, involving the redesign of a product for his tech startup. I was able to successfully ship the product with good feedback from end users, and this internship eventually evolved into a full-time position as a Product Designer at <strong>Meshilogic, Kinfra Park</strong>
             </p>
-            
+
             <p>
-              Successfully, I ran the pinnacle of a number of impactful student-led initiatives and personal product experience. Really just tried a lot, it was a Roark, love it, learn more!
+              And I had the privilege of successfully improving another premiere product and achieved positive outcomes. And the best part is, it was a mobile app I used during my college days to manage attendance, results, and more.
             </p>
-            
-            <p>
-              Also I had the freedom to develop strategic solutions that can be pivotal for the actual client's and impact, and succeeded in helping product innovation and startup in various industries.
-            </p>
+
           </div>
         </div>
       </section>
@@ -116,14 +107,10 @@ export default function About() {
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold mb-8 text-[var(--color-17-17-17)]">
             Leveling up.
           </h2>
-          
+
           <div className="space-y-6 text-base sm:text-lg leading-relaxed text-[var(--color-17-17-17)]">
             <p>
-              To deeply know the big <span className="text-[var(--color-primary)]">picture of Product</span> - I took basic UI which mostly goes into the idea about product marketing, design systems, feature development in Design process, and it's in the new context about how we define the DESIGN GOALS.
-            </p>
-            
-            <p>
-              Now I am a working member for creating frameworks that let us make better product decisions.
+              I'm currently working as a UI UX at <strong>Hancod</strong> -  . My main goal is making sure our brand looks great and connects better with people. I've been busy revamping all our marketing materials—things like webpages, webinar slides, and data sheets—to boost engagement
             </p>
           </div>
         </div>
@@ -135,10 +122,13 @@ export default function About() {
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold mb-8 text-[var(--color-17-17-17)]">
             Winding down.
           </h2>
-          
+
           <div className="space-y-6 text-base sm:text-lg leading-relaxed text-[var(--color-17-17-17)] mb-12">
             <p>
-              When I'm not behind a real work - either the meaning (especially about is designing deeply really matter?) or obsessing over <span className="text-[var(--color-primary)]">Star-lord's jacket</span> (got to be love it), you can find me:
+              Besides that, I'm a big fan of movies—always ready to settle in for a long film session
+            </p>
+            <p>
+              When work takes a back seat, I enjoy traveling, especially when it involves hunting down the best local food spots. I also love to spend time cooking, experimenting with new recipes in the kitchen
             </p>
           </div>
 
@@ -164,9 +154,9 @@ export default function About() {
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold mb-8 text-[var(--color-17-17-17)]">
             Oh wait
           </h2>
-          
+
           <p className="text-base sm:text-lg leading-relaxed text-[var(--color-17-17-17)] mb-12">
-            On the Tunes front which isn't darkness (I say to be the most); <span className="text-[var(--color-primary)]">We always learn from mistakes</span>.
+            My hero is Iron Man, and he's my getaway. I live by his words <strong>We always learn from mistakes</strong>
           </p>
 
           {/* Movie Images */}
@@ -190,8 +180,8 @@ export default function About() {
             Thanks for visiting. I'm always<br />
             happy to <span className="text-[var(--color-primary)]">connect</span>.
           </h2>
-          <button 
-            type="button" 
+          <button
+            type="button"
             className="bg-[var(--color-primary)] text-white px-8 py-4 rounded-full text-lg font-medium hover:opacity-90 transition-opacity"
           >
             Say Hi
