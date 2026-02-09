@@ -26,7 +26,7 @@ export default function DuxbePage() {
 
       {/* Hero - Light */}
       {/* Hero - Light */}
-      <section className="pt-28 pb-20 px-4 relative overflow-hidden bg-[#F9F7F4]">
+      <section className="pt-28 px-4 relative overflow-hidden bg-[#F9F7F4]">
         <div className="max-w-5xl mx-auto relative z-10 text-center">
           <AnimateOnScroll animation="fade-in-down">
             <h2 className="h2-section text-[var(--color-17-17-17)] mb-6">
@@ -42,14 +42,16 @@ export default function DuxbePage() {
           </AnimateOnScroll>
           <AnimateOnScroll animation="scale-in" delay={200}>
             <div className="flex justify-center">
-              <div className="relative w-full aspect-video rounded-3xl overflow-hidden shadow-2xl border border-gray-200/80">
+              <div className="relative w-full overflow-hidden">
                 <Image
                   src={DUXBE_IMAGES[0]}
                   alt="Duxbe app dashboard"
-                  fill
+                  
                   className="object-cover"
                   sizes="(max-width: 1024px) 100vw, 1024px"
                   priority
+                  width={1024}
+                  height={1024}
                 />
               </div>
             </div>
@@ -58,17 +60,17 @@ export default function DuxbePage() {
       </section>
 
       {/* Overview & Goal - Dark */}
-      <section className="py-16 sm:py-20 bg-[#272727] text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-8 flex flex-col lg:flex-row gap-12">
+      <section className="py-16 sm:py-20 bg-[#2A2A2E] text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-8 flex flex-col lg:flex-row gap-12 py-[120px]">
           {/* Main content */}
           <div className="flex-1">
             <AnimateOnScroll animation="fade-in-right">
-              <h2 className="h2-section mb-6">Overview</h2>
+              <h2 className="h2-section mb-[36px]">Overview</h2>
               <div className="space-y-5 text-[#e0e0e0] body-large leading-relaxed">
                 <p>
                   Duxbe is a billing solution designed to make everyday billing tasks simpler and easier for businesses. The focus was on creating a clean, user-friendly experience that helps users manage invoices, transactions, and routine billing work without unnecessary complexity.
                 </p>
-                <h3 className="h2-section mt-10 mb-2">Goal</h3>
+                <h3 className="h2-section mt-10 mb-[36px]">Goal</h3>
                 <p>
                   While working on this project, the goal was to build a system that feels intuitive and reliable, even for first-time users. By prioritizing usability and clarity,
                 </p>
@@ -82,21 +84,21 @@ export default function DuxbePage() {
           <AnimateOnScroll animation="fade-in-left" delay={100}>
             <aside className="w-full max-w-sm bg-[var(--color-primary-900)] rounded-2xl p-6 sm:p-8 text-white flex flex-col space-y-6 shadow-lg self-start">
               <div>
-                <h3 className="h4-subheading uppercase tracking-wider opacity-90 mb-2">Duration</h3>
+                <h3 className="h4-subheading tracking-wider opacity-90 mb-2">Duration</h3>
                 <p className="nav-menu">12 Months</p>
               </div>
               <div>
-                <h3 className="h4-subheading uppercase tracking-wider opacity-90 mb-2">My Role</h3>
+                <h3 className="h4-subheading tracking-wider opacity-90 mb-2">My Role</h3>
                 <p className="nav-menu">UX/UI Designer</p>
               </div>
               <div>
-                <h3 className="h4-subheading uppercase tracking-wider opacity-90 mb-2">Deliverables</h3>
+                <h3 className="h4-subheading tracking-wider opacity-90 mb-2">Deliverables</h3>
                 <p className="nav-menu">
                   Workflows, Wireframes, Visual and Interaction design
                 </p>
               </div>
               <div>
-                <h3 className="h4-subheading uppercase tracking-wider opacity-90 mb-2">Client</h3>
+                <h3 className="h4-subheading tracking-wider opacity-90 mb-2">Client</h3>
                 <p className="nav-menu underlined"><a href="#" className="hover:text-[var(--color-primary)] transition-colors underline">Hancod</a></p>
               </div>
             </aside>
@@ -183,9 +185,11 @@ export default function DuxbePage() {
                     <Image
                       src={item.img}
                       alt={item.title}
-                      fill
+                      
                       className="object-contain p-2"
                       sizes="(max-width: 768px) 100vw, 320px"
+                      width={320}
+                      height={320}
                     />
                   </div>
 
@@ -381,7 +385,7 @@ export default function DuxbePage() {
                 <Link href="/#work" className="hover:text-[var(--color-primary)] transition-colors">Work</Link>
                 <Link href="/about" className="hover:text-[var(--color-primary)] transition-colors">Contact</Link>
               </nav>
-              <nav className="flex flex-col gap-2 text-sm">
+              {/* <nav className="flex flex-col gap-2 text-sm">
                 <span className="font-semibold text-white/80 mb-1">Connect</span>
                 <a href="#" className="hover:text-[var(--color-primary)] transition-colors">Instagram</a>
                 <a href="#" className="hover:text-[var(--color-primary)] transition-colors">LinkedIn</a>
@@ -391,7 +395,7 @@ export default function DuxbePage() {
                 <span className="font-semibold text-white/80 mb-1">Legal</span>
                 <a href="#" className="hover:text-[var(--color-primary)] transition-colors">Privacy Policy</a>
                 <a href="#" className="hover:text-[var(--color-primary)] transition-colors">Terms of Service</a>
-              </nav>
+              </nav> */}
             </div>
           </div>
           <p className="text-center text-white/50 text-sm mt-10">© 2026 vyasan.design. All rights reserved.</p>

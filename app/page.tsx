@@ -28,23 +28,39 @@ export default function Home() {
             <Image src="/main-title.svg" alt="Akhilvyasan - Experience Designer specializing in UX/UI Design" width={705} height={214} className="mb-4 mx-auto w-full max-w-[280px] sm:max-w-[400px] md:max-w-[568px] lg:max-w-[705px] h-auto" priority />
           </AnimateOnScroll>
           <AnimateOnScroll animation="fade-in" delay={200}>
-            <p className="text-base sm:text-lg md:text-xl lg:text-[22px] font-semibold text-[var(--color-17-17-17)] text-center max-w-[568px] mx-auto mb-8 sm:mb-10 md:mb-[42px] leading-relaxed px-4">I am an Experience Designer with 3 years of expertise, enthusiastic about creating functional & interactive products with a strong aesthetic sense.</p>
+            <p className="text-base sm:text-lg md:text-xl lg:text-[22px] font-semibold text-[var(--color-17-17-17)] text-center max-w-[568px] mx-auto mb-8 sm:mb-10 md:mb-[42px] leading-relaxed px-4">I am an Experienced Designer with 3 years of expertise, enthusiastic about creating functional & interactive products with a strong aesthetic sense.</p>
           </AnimateOnScroll>
           <AnimateOnScroll animation="fade-in-up" delay={300}>
             <div className="flex items-center justify-center gap-[10px]">
-            <div className="bg-white rounded-full p-2 sm:p-3 md:p-[14px] shadow-[-3px_-7px_4px_0px_rgba(0,0,0,0.15)] backdrop-blur-[15px] border-2 border-transparent" style={{
-              background: 'linear-gradient(white, white) padding-box, radial-gradient(circle, #FFFFFF 0%, #FFFFFF00 100%) border-box'
-            }}>
-              <div className="flex items-center gap-3 sm:gap-4 md:gap-[20px] mr-2 sm:mr-3 md:mr-[14px]">
-                <button type="button" className="bg-[var(--color-primary)] text-white px-4 sm:px-5 md:px-6 py-2 sm:py-2.5 md:py-3 rounded-full text-sm sm:text-base font-medium flex items-center gap-2 sm:gap-3 md:gap-[14px]" aria-label="Download Resume">
-                  Resume
-                  <Image src="/arrow.svg" alt="" width={19} height={19} className="w-4 h-4 sm:w-5 sm:h-5" aria-hidden="true" />
-                </button>
-                <button type="button" className="cursor-pointer" aria-label="Connect on LinkedIn">
-                  <Image src="/linkedind.svg" alt="LinkedIn profile" width={39} height={38} className="w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10" />
-                </button>
+              <div
+                className="bg-white rounded-full p-2 sm:p-3 md:p-[14px] shadow-[-3px_-7px_4px_0px_rgba(0,0,0,0.15)] backdrop-blur-[15px] border-2 border-transparent"
+                style={{
+                  background:
+                    'linear-gradient(white, white) padding-box, radial-gradient(circle, #FFFFFF 0%, #FFFFFF00 100%) border-box',
+                }}
+              >
+                <div className="flex items-center gap-3 sm:gap-4 md:gap-[20px] mr-2 sm:mr-3 md:mr-[14px]">
+                  <a
+                    href="/resume.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-[var(--color-primary)] text-white px-4 sm:px-5 md:px-6 py-2 sm:py-2.5 md:py-3 rounded-full text-sm sm:text-base font-medium flex items-center gap-2 sm:gap-3 md:gap-[14px] transition-all duration-150 hover:scale-[1.03]"
+                    aria-label="Download Resume (PDF)"
+                  >
+                    Resume
+                    <Image src="/arrow.svg" alt="" width={19} height={19} className="w-4 h-4 sm:w-5 sm:h-5 transition-transform duration-150 group-hover:translate-x-1" aria-hidden="true" />
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/in/akhil-vyasan-4986492a4/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Connect on LinkedIn"
+                    className="cursor-pointer"
+                  >
+                    <Image src="/linkedind.svg" alt="LinkedIn profile" width={39} height={38} className="w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10" />
+                  </a>
+                </div>
               </div>
-            </div>
             </div>
           </AnimateOnScroll>
         </div>
@@ -68,7 +84,11 @@ export default function Home() {
             {projectsData.map((project, index) => {
               const isEven = index % 2 === 0;
               const imagePath = project.image.replace("public/", "/");
-              
+              // We'll use either project.caseStudyHref or fallback to image itself as link.
+              const imageLink = ("caseStudyHref" in project && project.caseStudyHref)
+                ? project.caseStudyHref
+                : imagePath;
+
               return (
                 <AnimateOnScroll 
                   key={index}
@@ -158,14 +178,21 @@ export default function Home() {
 
                   {/* Image Column */}
                   <div className="flex-1 w-full">
-                    <Image
-                      src={imagePath}
-                      alt={`${project.title} - ${project.description}`}
-                      width={600}
-                      height={400}
-                      className="w-full h-auto rounded-lg shadow-lg"
-                      itemProp="image"
-                    />
+                    <Link
+                      href={imageLink}
+                      target={("caseStudyHref" in project && project.caseStudyHref) ? undefined : "_blank"}
+                      rel={("caseStudyHref" in project && project.caseStudyHref) ? undefined : "noopener noreferrer"}
+                      aria-label={`Open image of ${project.title}${("caseStudyHref" in project && project.caseStudyHref) ? " project" : ""}`}
+                    >
+                      <Image
+                        src={imagePath}
+                        alt={`${project.title} - ${project.description}`}
+                        width={600}
+                        height={400}
+                        className="w-full h-auto rounded-lg"
+                        itemProp="image"
+                      />
+                    </Link>
                   </div>
                   </article>
                 </AnimateOnScroll>
@@ -186,56 +213,56 @@ export default function Home() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 md:gap-6" role="list">
             {/* Product Design */}
             <AnimateOnScroll animation="fade-in-up" delay={0}>
-              <article className="bg-[#FFF7F2] rounded-lg p-5 sm:p-6 shadow-[0_1px_4px_0_rgba(0,0,0,0.1),0_1px_4px_0_rgba(0,0,0,0.2)]" role="listitem">
-              <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-[#FFEDDD] flex items-center justify-center mb-3 sm:mb-4 shadow-[0_4px_4px_0_rgba(0,0,0,0.25)]">
-                <Image src="/icons/product_design.svg" alt="" width={24} height={24} className="w-5 h-5 sm:w-6 sm:h-6" aria-hidden="true" />
-              </div>
-              <h3 className="h4-subheading sm:text-2xl md:text-[28px] font-semibold text-[var(--color-17-17-17)] mb-2 sm:mb-3">Product Design</h3>
-              <p className="small-meta sm:text-base text-[var(--color-17-17-17)] leading-relaxed">I'm continuously developing my skill set to address every stage of product design, extending beyond traditional UX/UI.</p>
+              <article className="bg-[#FFF7F2] rounded-lg p-5 sm:p-6 shadow-[0_1px_4px_0_rgba(0,0,0,0.1),0_1px_4px_0_rgba(0,0,0,0.2)] h-full transition-all duration-300 hover:shadow-[0_4px_12px_0_rgba(0,0,0,0.15),0_2px_6px_0_rgba(0,0,0,0.25)] hover:-translate-y-1" role="listitem">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-[#FFEDDD] flex items-center justify-center mb-3 sm:mb-4 shadow-[0_4px_4px_0_rgba(0,0,0,0.25)]">
+                  <Image src="/icons/product_design.svg" alt="" width={24} height={24} className="w-5 h-5 sm:w-6 sm:h-6" aria-hidden="true" />
+                </div>
+                <h3 className="h4-subheading sm:text-2xl md:text-[28px] font-semibold text-[var(--color-17-17-17)] mb-2 sm:mb-3">Product Design</h3>
+                <p className="small-meta sm:text-base text-[var(--color-17-17-17)] leading-relaxed">I'm continuously developing my skill set to address every stage of product design, extending beyond traditional UX/UI.</p>
               </article>
             </AnimateOnScroll>
 
             {/* Visual Design */}
             <AnimateOnScroll animation="fade-in-up" delay={100}>
-              <article className="bg-[#FFF7F2] rounded-lg p-5 sm:p-6 shadow-[0_1px_4px_0_rgba(0,0,0,0.1),0_1px_4px_0_rgba(0,0,0,0.2)]" role="listitem">
-              <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-[#FFEDDD] flex items-center justify-center mb-3 sm:mb-4 shadow-[0_4px_4px_0_rgba(0,0,0,0.25)]">
-                <Image src="/icons/visual_design.svg" alt="" width={24} height={24} className="w-5 h-5 sm:w-6 sm:h-6" aria-hidden="true" />
-              </div>
-              <h3 className="h4-subheading sm:text-2xl md:text-[28px] font-semibold text-[var(--color-17-17-17)] mb-2 sm:mb-3">Visual Design</h3>
-              <p className="small-meta sm:text-base text-[var(--color-17-17-17)] leading-relaxed">Creating visually appealing and well-crafted designs is what I enjoy most.</p>
+              <article className="bg-[#FFF7F2] rounded-lg p-5 sm:p-6 shadow-[0_1px_4px_0_rgba(0,0,0,0.1),0_1px_4px_0_rgba(0,0,0,0.2)] h-full transition-all duration-300 hover:shadow-[0_4px_12px_0_rgba(0,0,0,0.15),0_2px_6px_0_rgba(0,0,0,0.25)] hover:-translate-y-1" role="listitem">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-[#FFEDDD] flex items-center justify-center mb-3 sm:mb-4 shadow-[0_4px_4px_0_rgba(0,0,0,0.25)]">
+                  <Image src="/icons/visual_design.svg" alt="" width={24} height={24} className="w-5 h-5 sm:w-6 sm:h-6" aria-hidden="true" />
+                </div>
+                <h3 className="h4-subheading sm:text-2xl md:text-[28px] font-semibold text-[var(--color-17-17-17)] mb-2 sm:mb-3">Visual Design</h3>
+                <p className="small-meta sm:text-base text-[var(--color-17-17-17)] leading-relaxed">Creating visually appealing and well-crafted designs is what I enjoy most.</p>
               </article>
             </AnimateOnScroll>
 
             {/* No code development */}
             <AnimateOnScroll animation="fade-in-up" delay={200}>
-              <article className="bg-[#FFF7F2] rounded-lg p-5 sm:p-6 shadow-[0_1px_4px_0_rgba(0,0,0,0.1),0_1px_4px_0_rgba(0,0,0,0.2)]" role="listitem">
-              <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-[#FFEDDD] flex items-center justify-center mb-3 sm:mb-4 shadow-[0_4px_4px_0_rgba(0,0,0,0.25)]">
-                <Image src="/icons/no_code.svg" alt="" width={24} height={24} className="w-5 h-5 sm:w-6 sm:h-6" aria-hidden="true" />
-              </div>
-              <h3 className="h4-subheading sm:text-2xl md:text-[28px] font-semibold text-[var(--color-17-17-17)] mb-2 sm:mb-3">No code development</h3>
-              <p className="small-meta sm:text-base text-[var(--color-17-17-17)] leading-relaxed">Well-versed in web fundamentals and capable of building functional websites without writing code.</p>
+              <article className="bg-[#FFF7F2] rounded-lg p-5 sm:p-6 shadow-[0_1px_4px_0_rgba(0,0,0,0.1),0_1px_4px_0_rgba(0,0,0,0.2)] h-full transition-all duration-300 hover:shadow-[0_4px_12px_0_rgba(0,0,0,0.15),0_2px_6px_0_rgba(0,0,0,0.25)] hover:-translate-y-1" role="listitem">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-[#FFEDDD] flex items-center justify-center mb-3 sm:mb-4 shadow-[0_4px_4px_0_rgba(0,0,0,0.25)]">
+                  <Image src="/icons/no_code.svg" alt="" width={24} height={24} className="w-5 h-5 sm:w-6 sm:h-6" aria-hidden="true" />
+                </div>
+                <h3 className="h4-subheading sm:text-2xl md:text-[28px] font-semibold text-[var(--color-17-17-17)] mb-2 sm:mb-3">No code development</h3>
+                <p className="small-meta sm:text-base text-[var(--color-17-17-17)] leading-relaxed">Well-versed in web fundamentals and capable of building functional websites without writing code.</p>
               </article>
             </AnimateOnScroll>
 
             {/* Interaction Design */}
             <AnimateOnScroll animation="fade-in-up" delay={300}>
-              <article className="bg-[#FFF7F2] rounded-lg p-5 sm:p-6 shadow-[0_1px_4px_0_rgba(0,0,0,0.1),0_1px_4px_0_rgba(0,0,0,0.2)]" role="listitem">
-              <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-[#FFEDDD] flex items-center justify-center mb-3 sm:mb-4 shadow-[0_4px_4px_0_rgba(0,0,0,0.25)]">
-                <Image src="/icons/interaction_design.svg" alt="" width={24} height={24} className="w-5 h-5 sm:w-6 sm:h-6" aria-hidden="true" />
-              </div>
-              <h3 className="h4-subheading sm:text-2xl md:text-[28px] font-semibold text-[var(--color-17-17-17)] mb-2 sm:mb-3">Interaction Design</h3>
-              <p className="small-meta sm:text-base text-[var(--color-17-17-17)] leading-relaxed">I enjoy bringing subtle motion and interactivity into my designs.</p>
+              <article className="bg-[#FFF7F2] rounded-lg p-5 sm:p-6 shadow-[0_1px_4px_0_rgba(0,0,0,0.1),0_1px_4px_0_rgba(0,0,0,0.2)] h-full transition-all duration-300 hover:shadow-[0_4px_12px_0_rgba(0,0,0,0.15),0_2px_6px_0_rgba(0,0,0,0.25)] hover:-translate-y-1" role="listitem">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-[#FFEDDD] flex items-center justify-center mb-3 sm:mb-4 shadow-[0_4px_4px_0_rgba(0,0,0,0.25)]">
+                  <Image src="/icons/interaction_design.svg" alt="" width={24} height={24} className="w-5 h-5 sm:w-6 sm:h-6" aria-hidden="true" />
+                </div>
+                <h3 className="h4-subheading sm:text-2xl md:text-[28px] font-semibold text-[var(--color-17-17-17)] mb-2 sm:mb-3">Interactive Design</h3>
+                <p className="small-meta sm:text-base text-[var(--color-17-17-17)] leading-relaxed">I enjoy bringing subtle motion and interactivity into my designs.</p>
               </article>
             </AnimateOnScroll>
 
             {/* Design Systems */}
             <AnimateOnScroll animation="fade-in-up" delay={400}>
-              <article className="bg-[#FFF7F2] rounded-lg p-5 sm:p-6 shadow-[0_1px_4px_0_rgba(0,0,0,0.1),0_1px_4px_0_rgba(0,0,0,0.2)]" role="listitem">
-              <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-[#FFEDDD] flex items-center justify-center mb-3 sm:mb-4 shadow-[0_4px_4px_0_rgba(0,0,0,0.25)]">
-                <Image src="/icons/design_systems.svg" alt="" width={24} height={24} className="w-5 h-5 sm:w-6 sm:h-6" aria-hidden="true" />
-              </div>
-              <h3 className="h4-subheading sm:text-2xl md:text-[28px] font-semibold text-[var(--color-17-17-17)] mb-2 sm:mb-3">Design Systems</h3>
-              <p className="small-meta sm:text-base text-[var(--color-17-17-17)] leading-relaxed">Experienced in creating and effectively maintaining design systems.</p>
+              <article className="bg-[#FFF7F2] rounded-lg p-5 sm:p-6 shadow-[0_1px_4px_0_rgba(0,0,0,0.1),0_1px_4px_0_rgba(0,0,0,0.2)] h-full transition-all duration-300 hover:shadow-[0_4px_12px_0_rgba(0,0,0,0.15),0_2px_6px_0_rgba(0,0,0,0.25)] hover:-translate-y-1" role="listitem">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-[#FFEDDD] flex items-center justify-center mb-3 sm:mb-4 shadow-[0_4px_4px_0_rgba(0,0,0,0.25)]">
+                  <Image src="/icons/design_systems.svg" alt="" width={24} height={24} className="w-5 h-5 sm:w-6 sm:h-6" aria-hidden="true" />
+                </div>
+                <h3 className="h4-subheading sm:text-2xl md:text-[28px] font-semibold text-[var(--color-17-17-17)] mb-2 sm:mb-3">Design Systems</h3>
+                <p className="small-meta sm:text-base text-[var(--color-17-17-17)] leading-relaxed">Experienced in creating and effectively maintaining design systems.</p>
               </article>
             </AnimateOnScroll>
           </div>
@@ -273,7 +300,13 @@ export default function Home() {
             </div>
           <div className="absolute bottom-0 left-0 right-0 top-0 flex flex-col items-center justify-center px-4">
             <p className="text-xl sm:text-2xl md:text-3xl lg:text-[40px] font-semibold text-[#F5F5F5] max-w-[568px] mx-auto text-center leading-tight mb-4 sm:mb-5 md:mb-6">Thanks for visiting. I'm always happy to <span className="text-[var(--color-primary)]">connect</span>.</p>
-            <button type="button" className="bg-[var(--color-primary)] text-white px-5 sm:px-6 py-2.5 sm:py-3 rounded-full text-sm sm:text-base font-medium flex items-center gap-3 sm:gap-[14px]" aria-label="Contact me">Say Hi</button>
+            <a
+              href="mailto:uxvyasan@gmail.com"
+              className="bg-[var(--color-primary)] text-white px-5 sm:px-6 py-2.5 sm:py-3 rounded-full text-sm sm:text-base font-medium flex items-center gap-3 sm:gap-[14px]"
+              aria-label="Contact me via email"
+            >
+              Say Hi
+            </a>
           </div>
           </div>
           

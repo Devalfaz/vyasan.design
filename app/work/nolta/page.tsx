@@ -61,8 +61,8 @@ export default function NoltaPage() {
       </section>
 
       {/* Overview & Project Details - Dark */}
-      <section className="py-16 sm:py-20 bg-[#272727] text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-8 flex flex-col lg:flex-row gap-12">
+      <section className="py-16 sm:py-20 bg-[#2A2A2E] text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-8 flex flex-col lg:flex-row gap-12 py-[120px]">
           {/* Main content */}
           <div className="flex-1">
             <AnimateOnScroll animation="fade-in-right">
@@ -83,21 +83,21 @@ export default function NoltaPage() {
           <AnimateOnScroll animation="fade-in-left" delay={100}>
             <aside className="w-full max-w-sm bg-[#8B4513] rounded-2xl p-6 sm:p-8 text-white flex flex-col space-y-6 shadow-lg self-start border border-white/10">
               <div>
-                <h3 className="h4-subheading uppercase tracking-wider opacity-90 mb-2">Duration</h3>
+                <h3 className="h4-subheading tracking-wider opacity-90 mb-2">Duration</h3>
                 <p className="nav-menu">1 Week</p>
               </div>
               <div>
-                <h3 className="h4-subheading uppercase tracking-wider opacity-90 mb-2">My Role</h3>
+                <h3 className="h4-subheading tracking-wider opacity-90 mb-2">My Role</h3>
                 <p className="nav-menu">UX/UI Designer</p>
               </div>
               <div>
-                <h3 className="h4-subheading uppercase tracking-wider opacity-90 mb-2">Deliverables</h3>
+                <h3 className="h4-subheading tracking-wider opacity-90 mb-2">Deliverables</h3>
                 <p className="nav-menu">
                   Workflows, Wireframes, Visual and Interaction design
                 </p>
               </div>
               <div>
-                <h3 className="h4-subheading uppercase tracking-wider opacity-90 mb-2">Client</h3>
+                <h3 className="h4-subheading tracking-wider opacity-90 mb-2">Client</h3>
                 <p className="nav-menu">Kottaram Agency</p>
               </div>
             </aside>

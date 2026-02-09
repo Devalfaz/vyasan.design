@@ -180,12 +180,13 @@ export default function About() {
             Thanks for visiting. I'm always<br />
             happy to <span className="text-[var(--color-primary)]">connect</span>.
           </h2>
-          <button
+          <a
             type="button"
+            href="mailto:uxvyasan@gmail.com"
             className="bg-[var(--color-primary)] text-white px-8 py-4 rounded-full text-lg font-medium hover:opacity-90 transition-opacity"
           >
             Say Hi
-          </button>
+          </a>
         </div>
       </section>
 
