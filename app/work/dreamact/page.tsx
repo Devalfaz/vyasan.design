@@ -259,7 +259,7 @@ export default function DreamactPage() {
 
       {/* Challenge Solution - Light */}
       <section className="py-16 sm:py-20 bg-[#F9F7F4] border-t border-[#B3B3B3]">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimateOnScroll animation="fade-in-down">
             <h2 className="text-2xl sm:text-3xl font-bold text-[var(--color-17-17-17)] mb-10 flex items-center gap-3">
               <span className="text-3xl sm:text-4xl">✅</span> Challenge Solution
@@ -283,12 +283,20 @@ export default function DreamactPage() {
             </AnimateOnScroll>
           </div>
           <AnimateOnScroll animation="fade-in-up" delay={250}>
-            <Link
-              href="/#work"
-              className="inline-flex items-center gap-2 mt-12 text-[var(--color-primary)] font-medium hover:underline body-large"
-            >
-              ← Back to Work
-            </Link>
+            <div className="flex justify-between items-center w-full mt-12">
+              <Link
+                href="/#work"
+                className="inline-flex items-center gap-2 text-[var(--color-primary)] font-medium hover:underline body-large"
+              >
+                ← Back to Work
+              </Link>
+              <Link
+                href="/work/nolta"
+                className="inline-flex items-center gap-2 text-[var(--color-primary)] font-medium hover:underline body-large"
+              >
+                Next Work →
+              </Link>
+            </div>
           </AnimateOnScroll>
         </div>
       </section>

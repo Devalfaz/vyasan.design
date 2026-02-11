@@ -99,8 +99,7 @@ export default function RootLayout({
               "image": "https://vyasan.design/vyasan.png",
               "sameAs": [
                 // Add your social media links here
-                // "https://www.linkedin.com/in/yourprofile",
-                // "https://twitter.com/yourhandle"
+                "https://www.linkedin.com/in/akhil-vyasan-4986492a4",
               ],
               "knowsAbout": [
                 "Product Design",

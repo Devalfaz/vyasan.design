@@ -173,12 +173,20 @@ export default function NoltaPage() {
             </div>
           </AnimateOnScroll>
           <AnimateOnScroll animation="fade-in-up" delay={100}>
-            <Link
-              href="/#work"
-              className="inline-flex items-center gap-2 mt-12 text-white font-medium hover:text-[var(--color-primary)] transition-colors body-large"
-            >
-              ← Back to Work
-            </Link>
+            <div className="flex justify-between items-center w-full mt-12">
+              <Link
+                href="/#work"
+                className="inline-flex items-center gap-2 text-white font-medium hover:text-[var(--color-primary)] transition-colors body-large"
+              >
+                ← Back to Work
+              </Link>
+              <Link
+                href="/work/duxbe"
+                className="inline-flex items-center gap-2 text-white font-medium hover:text-[var(--color-primary)] transition-colors body-large"
+              >
+                Next Work →
+              </Link>
+            </div>
           </AnimateOnScroll>
         </div>
       </section>

@@ -8,11 +8,11 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-[var(--color-light-bg)]">
       <Navbar />
-      
+
       {/* Home Section */}
       <section id="home" className="pt-24 min-h-screen flex items-center justify-center dot-matrix-grid px-4 relative overflow-hidden" aria-label="Hero section">
         {/* Radial Gradient Background - Top Center */}
-        <div 
+        <div
           className="absolute left-0 right-0 pointer-events-none"
           style={{
             top: '0%',
@@ -72,7 +72,7 @@ export default function Home() {
           <AnimateOnScroll animation="fade-in-down">
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[40px] font-semibold mb-4 sm:mb-5 md:mb-[18px] mx-auto text-center leading-tight">
               <span className="text-[var(--color-17-17-17)]">Featured</span>{" "}
-              <span className="text-[var(--color-secondary-text)]">Projects.</span>
+              <span className="text-[var(--color-b3-b3-b3)]">Projects.</span>
             </h2>
           </AnimateOnScroll>
           <AnimateOnScroll animation="fade-in" delay={100}>
@@ -90,119 +90,125 @@ export default function Home() {
                 : imagePath;
 
               return (
-                <AnimateOnScroll 
+                <AnimateOnScroll
                   key={index}
                   animation={isEven ? "fade-in-right" : "fade-in-left"}
                   delay={100 * index}
                 >
                   <article
-                    className={`flex flex-col ${
-                      isEven ? "md:flex-row" : "md:flex-row-reverse"
-                    } items-center gap-6 sm:gap-8 md:gap-10 lg:gap-12`}
+                    className={`flex flex-col ${isEven ? "md:flex-row" : "md:flex-row-reverse"
+                      } items-center gap-6 sm:gap-8 md:gap-10 lg:gap-12`}
                     itemScope
                     itemType="https://schema.org/CreativeWork"
                   >
-                  {/* Description Column */}
-                  <div className="flex-1 w-full">
-                    <div className="text-xs sm:text-sm text-[var(--color-17-17-17)] mb-3 sm:mb-4 md:mb-5">
-                      {project.meta}
+                    {/* Description Column */}
+                    <div className="flex-1 w-full max-w-[414px]">
+                      <div className="text-xs sm:text-sm text-[var(--color-17-17-17)] mb-[20px] sm:mb-4 md:mb-5">
+                        {project.meta}
+                      </div>
+                      <h3 className="text-xl sm:text-2xl md:text-[28px] font-semibold text-[var(--text-color)] mb-[16px] sm:mb-4 leading-tight" itemProp="name">
+                        {project.title}
+                      </h3>
+                      <p className="text-sm sm:text-base md:text-lg text-[var(--color-secondary-text)] mb-4 sm:mb-5 md:mb-6 leading-relaxed" itemProp="description">
+                        {project.description}
+                      </p>
+                      {"caseStudyHref" in project && project.caseStudyHref ? (
+                        <Link
+                          href={project.caseStudyHref}
+                          className="inline-flex items-center gap-2 text-sm sm:text-base text-[var(--color-17-17-17)] hover:text-[var(--color-primary)] transition-colors"
+                          aria-label={`View ${project.title} case study`}
+                        >
+                          <span>View case study</span>
+                          <svg
+                            width="19"
+                            height="19"
+                            viewBox="0 0 19 19"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                            className="stroke-current w-4 h-4 sm:w-5 sm:h-5"
+                            aria-hidden="true"
+                          >
+                            <path
+                              d="M5.54175 13.4583L13.4584 5.54166"
+                              strokeWidth="2"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                            />
+                            <path
+                              d="M5.54175 5.54166H13.4584V13.4583"
+                              strokeWidth="2"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                            />
+                          </svg>
+                        </Link>
+                      ) : (
+                        <button
+                          type="button"
+                          className="flex items-center gap-2 text-sm sm:text-base text-[var(--color-17-17-17)] hover:text-[var(--color-primary)] transition-colors cursor-pointer"
+                          aria-label={`View ${project.title} case study`}
+                        >
+                          <span>View case study</span>
+                          <svg
+                            width="19"
+                            height="19"
+                            viewBox="0 0 19 19"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                            className="stroke-current w-4 h-4 sm:w-5 sm:h-5"
+                            aria-hidden="true"
+                          >
+                            <path
+                              d="M5.54175 13.4583L13.4584 5.54166"
+                              strokeWidth="2"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                            />
+                            <path
+                              d="M5.54175 5.54166H13.4584V13.4583"
+                              strokeWidth="2"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                            />
+                          </svg>
+                        </button>
+                      )}
                     </div>
-                    <h3 className="text-xl sm:text-2xl md:text-[28px] font-semibold text-[var(--color-17-17-17)] mb-3 sm:mb-4 leading-tight" itemProp="name">
-                      {project.title}
-                    </h3>
-                    <p className="text-sm sm:text-base md:text-lg text-[var(--color-secondary-text)] mb-4 sm:mb-5 md:mb-6 leading-relaxed" itemProp="description">
-                      {project.description}
-                    </p>
-                    {"caseStudyHref" in project && project.caseStudyHref ? (
-                      <Link
-                        href={project.caseStudyHref}
-                        className="inline-flex items-center gap-2 text-sm sm:text-base text-[var(--color-17-17-17)] hover:text-[var(--color-primary)] transition-colors"
-                        aria-label={`View ${project.title} case study`}
-                      >
-                        <span>View case study</span>
-                        <svg
-                          width="19"
-                          height="19"
-                          viewBox="0 0 19 19"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                          className="stroke-current w-4 h-4 sm:w-5 sm:h-5"
-                          aria-hidden="true"
-                        >
-                          <path
-                            d="M5.54175 13.4583L13.4584 5.54166"
-                            strokeWidth="2"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                          />
-                          <path
-                            d="M5.54175 5.54166H13.4584V13.4583"
-                            strokeWidth="2"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                          />
-                        </svg>
-                      </Link>
-                    ) : (
-                      <button
-                        type="button"
-                        className="flex items-center gap-2 text-sm sm:text-base text-[var(--color-17-17-17)] hover:text-[var(--color-primary)] transition-colors cursor-pointer"
-                        aria-label={`View ${project.title} case study`}
-                      >
-                        <span>View case study</span>
-                        <svg
-                          width="19"
-                          height="19"
-                          viewBox="0 0 19 19"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                          className="stroke-current w-4 h-4 sm:w-5 sm:h-5"
-                          aria-hidden="true"
-                        >
-                          <path
-                            d="M5.54175 13.4583L13.4584 5.54166"
-                            strokeWidth="2"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                          />
-                          <path
-                            d="M5.54175 5.54166H13.4584V13.4583"
-                            strokeWidth="2"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                          />
-                        </svg>
-                      </button>
-                    )}
-                  </div>
 
-                  {/* Image Column */}
-                  <div className="flex-1 w-full">
-                    <Link
-                      href={imageLink}
-                      target={("caseStudyHref" in project && project.caseStudyHref) ? undefined : "_blank"}
-                      rel={("caseStudyHref" in project && project.caseStudyHref) ? undefined : "noopener noreferrer"}
-                      aria-label={`Open image of ${project.title}${("caseStudyHref" in project && project.caseStudyHref) ? " project" : ""}`}
-                    >
-                      <Image
-                        src={imagePath}
-                        alt={`${project.title} - ${project.description}`}
-                        width={600}
-                        height={400}
-                        className="w-full h-auto rounded-lg"
-                        itemProp="image"
-                      />
-                    </Link>
-                  </div>
+                    {/* Image Column */}
+                    <div className="flex-1 w-full">
+                      <Link
+                        href={imageLink}
+                        target={("caseStudyHref" in project && project.caseStudyHref) ? undefined : "_blank"}
+                        rel={("caseStudyHref" in project && project.caseStudyHref) ? undefined : "noopener noreferrer"}
+                        aria-label={`Open image of ${project.title}${("caseStudyHref" in project && project.caseStudyHref) ? " project" : ""}`}
+                      >
+                        <Image
+                          src={imagePath}
+                          alt={`${project.title} - ${project.description}`}
+                          width={600}
+                          height={400}
+                          className="w-full h-auto rounded-lg"
+                          itemProp="image"
+                        />
+                      </Link>
+                    </div>
                   </article>
                 </AnimateOnScroll>
               );
             })}
           </div>
+        </div>
+      </section>
+
+      {/* Work Section */}
+      <section id="work" className="py-12 sm:py-16 md:py-20 lg:py-24 bg-[#F5F5F5]" aria-label="Leveling Up">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
           <AnimateOnScroll animation="fade-in-down">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[40px] font-semibold mb-4 sm:mb-5 md:mb-[18px] mx-auto text-center mt-12 sm:mt-16 md:mt-20 lg:mt-24 leading-tight">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[40px] font-semibold mb-4 sm:mb-5 md:mb-[18px] mx-auto text-center leading-tight">
               <span className="text-[var(--color-17-17-17)]">Leveling</span>{" "}
-              <span className="text-[var(--color-secondary-text)]">up each day.</span>
+              <span className="text-[var(--color-b3-b3-b3)]">up each day.</span>
             </h2>
           </AnimateOnScroll>
           <AnimateOnScroll animation="fade-in" delay={100}>
@@ -269,47 +275,60 @@ export default function Home() {
         </div>
       </section>
 
+
       {/* About Section */}
       <section id="about" className="" aria-label="Contact section">
-        <div className="bg-[#272727] min-h-[280px] sm:min-h-[320px] md:min-h-[380px] relative">
+        <div className="bg-[#272727] min-h-[350px] sm:min-h-[400px] md:min-h-[460px] relative flex items-center justify-center">
           {/* Shapes Container - Full Width */}
-          <div className="relative w-full h-[280px] sm:h-[320px] md:h-[380px] overflow-hidden">
+          <div className="relative w-full h-[350px] sm:h-[400px] md:h-[460px] overflow-hidden flex items-center justify-center">
             {/* Shape 1 - Top Left */}
             <div className="absolute top-3 left-4 sm:top-4 sm:left-6 md:top-5 md:left-12" aria-hidden="true">
               <Image src="/shapes/1.svg" alt="" width={195} height={118} className="w-20 sm:w-32 md:w-40 lg:w-[195px] h-auto" />
             </div>
-          
+
             {/* Shape 2 - Top Right */}
             <div className="absolute top-3 right-4 sm:top-4 sm:right-6 md:top-5 md:right-10" aria-hidden="true">
               <Image src="/shapes/2.svg" alt="" width={66} height={69} className="w-10 sm:w-12 md:w-14 lg:w-[66px] h-auto" />
             </div>
-          
+
             {/* Shape 3 - Middle Right - Hidden on mobile */}
             <div className="hidden md:block absolute top-1/2 right-[200px] lg:right-[350px] -translate-y-1/2" aria-hidden="true">
               <Image src="/shapes/3.svg" alt="" width={99} height={125} className="w-16 md:w-20 lg:w-[99px] h-auto" />
             </div>
-          
+
             {/* Shape 4 - Bottom Left */}
             <div className="absolute bottom-3 left-4 sm:bottom-4 sm:left-6 md:bottom-5 md:left-12" aria-hidden="true">
               <Image src="/shapes/4.svg" alt="" width={125} height={130} className="w-16 sm:w-20 md:w-24 lg:w-[125px] h-auto" />
             </div>
-          
+
             {/* Shape 5 - Bottom Right */}
             <div className="absolute bottom-3 right-4 sm:bottom-4 sm:right-6 md:bottom-5 md:right-12" aria-hidden="true">
               <Image src="/shapes/5.svg" alt="" width={94} height={137} className="w-12 sm:w-16 md:w-20 lg:w-[94px] h-auto" />
             </div>
-          <div className="absolute bottom-0 left-0 right-0 top-0 flex flex-col items-center justify-center px-4">
-            <p className="text-xl sm:text-2xl md:text-3xl lg:text-[40px] font-semibold text-[#F5F5F5] max-w-[568px] mx-auto text-center leading-tight mb-4 sm:mb-5 md:mb-6">Thanks for visiting. I'm always happy to <span className="text-[var(--color-primary)]">connect</span>.</p>
-            <a
-              href="mailto:uxvyasan@gmail.com"
-              className="bg-[var(--color-primary)] text-white px-5 sm:px-6 py-2.5 sm:py-3 rounded-full text-sm sm:text-base font-medium flex items-center gap-3 sm:gap-[14px]"
-              aria-label="Contact me via email"
-            >
-              Say Hi
-            </a>
+            {/* Centered text and button */}
+            <div className="absolute inset-0 flex flex-col items-center justify-center px-4 text-center">
+              <p className="text-xl sm:text-2xl md:text-3xl lg:text-[40px] font-semibold text-[#F5F5F5] max-w-[568px] mx-auto leading-tight mb-4 sm:mb-5 md:mb-6">Thanks for visiting. I'm always happy to <span className="text-[var(--color-primary)]">connect</span>.</p>
+              <div className="relative group flex justify-center">
+                {/* Ripple Effect Background */}
+                <span className="absolute inset-0 rounded-full bg-[var(--color-primary)] opacity-30 blur-lg scale-110 group-hover:scale-125 transition-all duration-300 pointer-events-none"></span>
+                <a
+                  href="https://www.linkedin.com/in/akhil-vyasan-4986492a4/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Contact me via LinkedIn"
+                  className="group flex items-center justify-start relative z-[3] h-[52px] px-7 py-5 gap-2 rounded-full flex-[0_1_auto] text-[16px] font-normal leading-7 font-montserrat no-underline transition-all duration-300 bg-[#FFF7F2] text-[rgb(26,27,31)] shadow-[inset_0_2px_rgba(255,255,255,0.18)] hover:bg-[var(--color-primary)]"
+                  style={{
+                    boxSizing: "border-box",
+                    textSizeAdjust: "100%",
+                  }}
+                >
+                  <div className="logo-3 font-semibold" style={{ color: "white" }}>
+                    <span className="group-hover:text-white group-hover:drop-shadow transition-colors duration-300 text-[var(--color-primary)]">Say hi</span>
+                  </div>
+                </a>
+              </div>
+            </div>
           </div>
-          </div>
-          
         </div>
       </section>
 

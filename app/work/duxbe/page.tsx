@@ -346,7 +346,7 @@ export default function DuxbePage() {
 
       {/* Key Learnings - Light */}
       <section className="py-16 sm:py-20 bg-[#f8f8f8] border-t border-[#B3B3B3]">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimateOnScroll animation="fade-in-down">
             <h2 className="h2-section text-[var(--color-17-17-17)] mb-8 flex items-center gap-3">
               <span className="text-3xl sm:text-4xl">📚</span> Key Learnings
@@ -358,15 +358,23 @@ export default function DuxbePage() {
                 Through these redesigns, I learned that <span className="font-bold">simplifying content</span> and improving visual hierarchy greatly enhances usability. Clear placement of actions and consistent patterns help users move faster with fewer errors, especially in real-world, high-use scenarios like billing and inventory management.
               </p>
             </AnimateOnScroll>
-            <AnimateOnScroll animation="fade-in-up" delay={100}>
+          </div>
+          <AnimateOnScroll animation="fade-in-up" delay={100}>
+            <div className="flex justify-between items-center w-full mt-4">
               <Link
                 href="/#work"
-                className="inline-flex items-center gap-2 mt-4 text-[var(--color-primary)] font-medium hover:underline"
+                className="inline-flex items-center gap-2 text-[var(--color-primary)] font-medium hover:underline"
               >
                 ← Back to Work
               </Link>
-            </AnimateOnScroll>
-          </div>
+              <Link
+                href="/work/tcs"
+                className="inline-flex items-center gap-2 text-[var(--color-primary)] font-medium hover:underline"
+              >
+                Next Work →
+              </Link>
+            </div>
+          </AnimateOnScroll>
         </div>
       </section>
 

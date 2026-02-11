@@ -172,21 +172,59 @@ export default function About() {
           </div>
         </div>
       </section>
+      {/* About Section */}
+      <section id="about" className="" aria-label="Contact section">
+        <div className="bg-[#272727] min-h-[350px] sm:min-h-[400px] md:min-h-[460px] relative flex items-center justify-center">
+          {/* Shapes Container - Full Width */}
+          <div className="relative w-full h-[350px] sm:h-[400px] md:h-[460px] overflow-hidden flex items-center justify-center">
+            {/* Shape 1 - Top Left */}
+            <div className="absolute top-3 left-4 sm:top-4 sm:left-6 md:top-5 md:left-12" aria-hidden="true">
+              <Image src="/shapes/1.svg" alt="" width={195} height={118} className="w-20 sm:w-32 md:w-40 lg:w-[195px] h-auto" />
+            </div>
 
-      {/* Contact Section */}
-      <section className="py-16 bg-[#272727]">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-white mb-6 leading-tight">
-            Thanks for visiting. I'm always<br />
-            happy to <span className="text-[var(--color-primary)]">connect</span>.
-          </h2>
-          <a
-            type="button"
-            href="mailto:uxvyasan@gmail.com"
-            className="bg-[var(--color-primary)] text-white px-8 py-4 rounded-full text-lg font-medium hover:opacity-90 transition-opacity"
-          >
-            Say Hi
-          </a>
+            {/* Shape 2 - Top Right */}
+            <div className="absolute top-3 right-4 sm:top-4 sm:right-6 md:top-5 md:right-10" aria-hidden="true">
+              <Image src="/shapes/2.svg" alt="" width={66} height={69} className="w-10 sm:w-12 md:w-14 lg:w-[66px] h-auto" />
+            </div>
+
+            {/* Shape 3 - Middle Right - Hidden on mobile */}
+            <div className="hidden md:block absolute top-1/2 right-[200px] lg:right-[350px] -translate-y-1/2" aria-hidden="true">
+              <Image src="/shapes/3.svg" alt="" width={99} height={125} className="w-16 md:w-20 lg:w-[99px] h-auto" />
+            </div>
+
+            {/* Shape 4 - Bottom Left */}
+            <div className="absolute bottom-3 left-4 sm:bottom-4 sm:left-6 md:bottom-5 md:left-12" aria-hidden="true">
+              <Image src="/shapes/4.svg" alt="" width={125} height={130} className="w-16 sm:w-20 md:w-24 lg:w-[125px] h-auto" />
+            </div>
+
+            {/* Shape 5 - Bottom Right */}
+            <div className="absolute bottom-3 right-4 sm:bottom-4 sm:right-6 md:bottom-5 md:right-12" aria-hidden="true">
+              <Image src="/shapes/5.svg" alt="" width={94} height={137} className="w-12 sm:w-16 md:w-20 lg:w-[94px] h-auto" />
+            </div>
+            {/* Centered text and button */}
+            <div className="absolute inset-0 flex flex-col items-center justify-center px-4 text-center">
+              <p className="text-xl sm:text-2xl md:text-3xl lg:text-[40px] font-semibold text-[#F5F5F5] max-w-[568px] mx-auto leading-tight mb-4 sm:mb-5 md:mb-6">Thanks for visiting. I'm always happy to <span className="text-[var(--color-primary)]">connect</span>.</p>
+              <div className="relative group flex justify-center">
+                {/* Ripple Effect Background */}
+                <span className="absolute inset-0 rounded-full bg-[var(--color-primary)] opacity-30 blur-lg scale-110 group-hover:scale-125 transition-all duration-300 pointer-events-none"></span>
+                <a
+                  href="https://www.linkedin.com/in/akhil-vyasan-4986492a4/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Contact me via LinkedIn"
+                  className="group flex items-center justify-start relative z-[3] h-[52px] px-7 py-5 gap-2 rounded-full flex-[0_1_auto] text-[16px] font-normal leading-7 font-montserrat no-underline transition-all duration-300 bg-[#FFF7F2] text-[rgb(26,27,31)] shadow-[inset_0_2px_rgba(255,255,255,0.18)] hover:bg-[var(--color-primary)]"
+                  style={{
+                    boxSizing: "border-box",
+                    textSizeAdjust: "100%",
+                  }}
+                >
+                  <div className="logo-3 font-semibold" style={{ color: "white" }}>
+                    <span className="group-hover:text-white group-hover:drop-shadow transition-colors duration-300 text-[var(--color-primary)]">Say hi</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 

@@ -157,7 +157,7 @@ export default function TotalCampusSolutionPage() {
       </section>
 
       <section className="py-16 sm:py-20 bg-[#FABE9815]">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
           <AnimateOnScroll animation="fade-in-down">
             <h2 className="h2-section text-center mb-6 text-[var(--text-color)]">Sketches</h2>
           </AnimateOnScroll>
@@ -237,10 +237,10 @@ export default function TotalCampusSolutionPage() {
             </p>
           </AnimateOnScroll>
           <AnimateOnScroll animation="scale-in">
-            <div className="rounded-2xl overflow-hidden bg-[#e8e8e8] shadow-lg">
+            <div className="rounded-2xl overflow-hidden shadow-lg">
               <div className="relative w-full">
                 <Image
-                  src={TCS_IMAGES[5]}
+                  src={TCS_IMAGES[6]}
                   alt="Attendance design with Mark Attendance and Absentees screens"
                   width={1200}
                   height={800}
@@ -265,10 +265,10 @@ export default function TotalCampusSolutionPage() {
             </p>
           </AnimateOnScroll>
           <AnimateOnScroll animation="scale-in">
-            <div className="rounded-2xl overflow-hidden bg-[#e8e8e8] shadow-lg">
+            <div className="rounded-2xl overflow-hidden shadow-lg">
               <div className="relative w-full">
                 <Image
-                  src={TCS_IMAGES[6]}
+                  src={TCS_IMAGES[5]}
                   alt="Typography and components design system"
                   width={1200}
                   height={800}
@@ -293,7 +293,7 @@ export default function TotalCampusSolutionPage() {
             </p>
           </AnimateOnScroll>
           <AnimateOnScroll animation="scale-in">
-            <div className="rounded-2xl overflow-hidden bg-[#e8e8e8] shadow-lg">
+            <div className="rounded-2xl overflow-hidden shadow-lg">
               <div className="relative w-full">
                 <Image
                   src={TCS_IMAGES[7]}
@@ -339,7 +339,7 @@ export default function TotalCampusSolutionPage() {
 
       {/* Learnings - Light */}
       <section className="py-16 sm:py-20 bg-[#f8f8f8] border-t border-[#B3B3B3]">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimateOnScroll animation="fade-in-down">
             <h2 className="h2-section text-[var(--text-color)] mb-8">Learnings</h2>
           </AnimateOnScroll>
@@ -354,15 +354,23 @@ export default function TotalCampusSolutionPage() {
                 I&apos;m always open to learning and improving, so if you notice anything that could be done better or have alternative ideas, I&apos;d truly appreciate your feedback.
               </p>
             </AnimateOnScroll>
-            <AnimateOnScroll animation="fade-in-up" delay={200}>
+          </div>
+          <AnimateOnScroll animation="fade-in-up" delay={200}>
+            <div className="flex justify-between items-center w-full mt-4">
               <Link
                 href="/#work"
-                className="inline-flex items-center gap-2 mt-4 text-[var(--color-primary)] font-medium hover:underline"
+                className="inline-flex items-center gap-2 text-[var(--color-primary)] font-medium hover:underline"
               >
                 ← Back to Work
               </Link>
-            </AnimateOnScroll>
-          </div>
+              <Link
+                href="/work/dreamact"
+                className="inline-flex items-center gap-2 text-[var(--color-primary)] font-medium hover:underline"
+              >
+                Next Work →
+              </Link>
+            </div>
+          </AnimateOnScroll>
         </div>
       </section>
 
