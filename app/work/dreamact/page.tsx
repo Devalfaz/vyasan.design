@@ -21,7 +21,7 @@ export default function DreamactPage() {
       <Navbar />
 
       {/* Hero - Light / Gradient */}
-      <section className="pt-28 pb-20 px-4 relative overflow-hidden">
+      <section className="pt-28 pb-16 sm:pb-20 px-4 relative overflow-hidden">
         <div
           className="absolute left-0 right-0 pointer-events-none"
           style={{
@@ -67,8 +67,8 @@ export default function DreamactPage() {
           {/* Main content */}
           <div className="flex-1">
             <AnimateOnScroll animation="fade-in-right">
-              <h2 className="h2-section mb-6">Overview</h2>
-              <div className="space-y-5 text-[#e0e0e0] body-large leading-relaxed">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold mb-6">Overview</h2>
+              <div className="space-y-5 text-[#e0e0e0] text-base sm:text-lg leading-relaxed">
                 <p>
                   Dreamact is a global casting platform that helps actors, models, singers, and dancers showcase their profiles, reels, and portfolios while connecting with agencies and casting professionals worldwide with confidence.
                 </p>
@@ -76,7 +76,7 @@ export default function DreamactPage() {
                   The platform makes it easy for casting teams to search, filter, and discover talent, while built-in privacy controls allow performers to manage their visibility and opportunities.
                 </p>
 
-                <h2 className="h2-section mt-12 mb-6">Challenge</h2>
+                <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold mt-12 mb-6">Challenge</h2>
                 <p>
                   The main challenge was building a platform that supports global talent discovery while keeping user privacy and security intact. The app needed to enable smooth connections between performers and casting professionals, along with timely updates in an industry where speed matters.
                 </p>
@@ -261,11 +261,11 @@ export default function DreamactPage() {
       <section className="py-16 sm:py-20 bg-[#F9F7F4] border-t border-[#B3B3B3]">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimateOnScroll animation="fade-in-down">
-            <h2 className="text-2xl sm:text-3xl font-bold text-[var(--color-17-17-17)] mb-10 flex items-center gap-3">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[var(--color-17-17-17)] mb-10 flex items-center gap-3">
               <span className="text-3xl sm:text-4xl">✅</span> Challenge Solution
             </h2>
           </AnimateOnScroll>
-          <div className="space-y-8 text-[var(--color-secondary-text)] body-large">
+          <div className="space-y-8 text-[var(--color-secondary-text)] text-base sm:text-lg">
             <AnimateOnScroll animation="fade-in-up">
               <p>Two-factor authentication (2FA) to strengthen account security and protect user data.</p>
             </AnimateOnScroll>

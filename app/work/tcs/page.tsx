@@ -28,7 +28,7 @@ export default function TotalCampusSolutionPage() {
       <Navbar />
 
       {/* Hero */}
-      <section className="pt-28 pb-20 px-4 relative overflow-hidden">
+      <section className="pt-28 pb-16 sm:pb-20 px-4 relative overflow-hidden">
         <div
           className="absolute left-0 right-0 pointer-events-none"
           style={{
@@ -40,7 +40,7 @@ export default function TotalCampusSolutionPage() {
         />
         <div className="max-w-5xl mx-auto relative z-10 text-center">
           <AnimateOnScroll animation="fade-in-down">
-            <h1 className="h2-section text-[var(--color-17-17-17)] mb-4 text-center">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-[var(--color-17-17-17)] mb-4 text-center">
               Enhancing the User Experience of{" "}
               <span className="text-[var(--color-primary)]">Total Campus Solution</span>
             </h1>
@@ -72,8 +72,8 @@ export default function TotalCampusSolutionPage() {
           {/* Main content */}
           <div className="flex-1">
             <AnimateOnScroll animation="fade-in-right">
-              <h2 className="h2-section mb-6">Introduction</h2>
-              <div className="space-y-5 text-[#e0e0e0] body-large leading-relaxed">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold mb-6">Introduction</h2>
+              <div className="space-y-5 text-[#e0e0e0] text-base sm:text-lg leading-relaxed">
                 <p>
                   Total Campus Solution is a flagship product by Meshbright that streamlines higher education operations through an integrated web and mobile platform,
                   <span className="text-[var(--color-primary)] italic"> managing features such as attendance, examination, and leave requests.</span>
@@ -81,7 +81,7 @@ export default function TotalCampusSolutionPage() {
                 <p>
                   Designed with three distinct gateways, the software provides tailored access for students, parents, staff, managers, and administrators to manage information and view reports.
                 </p>
-                <h3 className="h2-section mt-10 mb-2">My role</h3>
+                <h3 className="text-xl sm:text-2xl md:text-3xl font-semibold mt-10 mb-2">My role</h3>
                 <p>
                   As the project’s only designer, I directed the experience and interface design from research through delivery.
                 </p>
@@ -159,10 +159,10 @@ export default function TotalCampusSolutionPage() {
       <section className="py-16 sm:py-20 bg-[#FABE9815]">
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
           <AnimateOnScroll animation="fade-in-down">
-            <h2 className="h2-section text-center mb-6 text-[var(--text-color)]">Sketches</h2>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-center mb-6 text-[var(--text-color)]">Sketches</h2>
           </AnimateOnScroll>
           <AnimateOnScroll animation="fade-in-up">
-            <p className="body-large text-[var(--text-color)] mb-10 max-w-2xl mx-auto text-center">
+            <p className="text-base sm:text-lg text-[var(--text-color)] mb-10 max-w-2xl mx-auto text-center">
               I started with hand-drawn sketches to rapidly explore ideas and iterate on layouts. These early sketches of the homepage and attendance screen helped define the structure and flow of the final design.
             </p>
           </AnimateOnScroll>
@@ -189,8 +189,8 @@ export default function TotalCampusSolutionPage() {
             </div>
           </div>
           <AnimateOnScroll animation="fade-in-up">
-            <h2 className="h2-section mt-16 mb-4 text-[var(--text-color)] text-center">Final designs</h2>
-            <p className="body-large text-[var(--text-color)] max-w-2xl mx-auto text-center mb-8">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold mt-16 mb-4 text-[var(--text-color)] text-center">Final designs</h2>
+            <p className="text-base sm:text-lg text-[var(--text-color)] max-w-2xl mx-auto text-center mb-8">
               Building on the sketches and wireframes, I created several visual design iterations. The final designs shown below were shaped through continuous reviews and user feedback.
             </p>
           </AnimateOnScroll>
@@ -226,17 +226,21 @@ export default function TotalCampusSolutionPage() {
       </section>
 
       {/* Attendance - Dark */}
-      <section className="py-16 sm:py-20 bg-[#272727] border-t border-[#B3B3B3]">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-16 sm:py-20 bg-[#f8f8f8] border-b border-[#E5E5E5]">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimateOnScroll animation="fade-in-down">
-            <h2 className="h2-section text-center mb-6 text-white">Attendance</h2>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-center mb-6 text-[var(--text-color)]">
+              Identifying the <span className="text-[var(--color-primary)]">Problem</span>
+            </h2>
           </AnimateOnScroll>
           <AnimateOnScroll animation="fade-in-up">
-            <p className="body-large text-[var(--color-b3-b3-b3)] max-w-2xl mx-auto text-center mb-10">
-              The core purpose of the mobile app was daily attendance, and the design focused on delivering the most efficient and intuitive user experience.
+            <p className="text-base sm:text-lg text-[var(--text-color)] mb-10 text-center max-w-3xl mx-auto leading-relaxed">
+              When I started the project, the mobile experience had several usability issues that frustrated users.
+              <span className="font-semibold block mt-2">The key problems included:</span>
             </p>
           </AnimateOnScroll>
-          <AnimateOnScroll animation="scale-in">
+          
+          <div className="space-y-8 max-w-3xl mx-auto text-[var(--text-color)] text-base sm:text-lg">
             <div className="rounded-2xl overflow-hidden shadow-lg">
               <div className="relative w-full">
                 <Image
@@ -249,7 +253,7 @@ export default function TotalCampusSolutionPage() {
                 />
               </div>
             </div>
-          </AnimateOnScroll>
+         </div>
         </div>
       </section>
 
@@ -341,16 +345,16 @@ export default function TotalCampusSolutionPage() {
       <section className="py-16 sm:py-20 bg-[#f8f8f8] border-t border-[#B3B3B3]">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimateOnScroll animation="fade-in-down">
-            <h2 className="h2-section text-[var(--text-color)] mb-8">Learnings</h2>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-[var(--text-color)] mb-8">Learnings</h2>
           </AnimateOnScroll>
           <div className="space-y-6 max-w-2xl">
             <AnimateOnScroll animation="fade-in-up">
-              <p className="body-large text-[var(--text-color)] leading-relaxed">
+              <p className="text-base sm:text-lg text-[var(--text-color)] leading-relaxed">
                 This was one of my most meaningful projects at Meshilogic. I worked as the sole designer, handling everything from research and user interviews to the final design. It was challenging at times, but also very engaging, and I gave it my best to deliver a quality product.
               </p>
             </AnimateOnScroll>
             <AnimateOnScroll animation="fade-in-up" delay={100}>
-              <p className="body-large text-[var(--text-color)] leading-relaxed">
+              <p className="text-base sm:text-lg text-[var(--text-color)] leading-relaxed">
                 I&apos;m always open to learning and improving, so if you notice anything that could be done better or have alternative ideas, I&apos;d truly appreciate your feedback.
               </p>
             </AnimateOnScroll>

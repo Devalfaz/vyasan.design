@@ -20,7 +20,7 @@ export default function NoltaPage() {
       <Navbar />
 
       {/* Hero - Light */}
-      <section className="pt-28 pb-20 px-4 relative overflow-hidden">
+      <section className="pt-28 pb-16 sm:pb-20 px-4 relative overflow-hidden">
         <div
           className="absolute left-0 right-0 pointer-events-none"
           style={{
@@ -66,12 +66,12 @@ export default function NoltaPage() {
           {/* Main content */}
           <div className="flex-1">
             <AnimateOnScroll animation="fade-in-right">
-              <h2 className="h2-section mb-6">Overview</h2>
-              <div className="space-y-5 text-[#e0e0e0] body-large leading-relaxed">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold mb-6">Overview</h2>
+              <div className="space-y-5 text-[#e0e0e0] text-base sm:text-lg leading-relaxed">
                 <p>
                   Nolta is a premium cookware and homeware brand offering non-toxic, PFOA-free products for healthier everyday cooking. For this project, I handled the complete website experience—from discovery and content structure to visual design and final build—ensuring the brand’s quality and sustainability were clearly reflected online.
                 </p>
-                <h2 className="h2-section mt-12 mb-6">Challenge</h2>
+                <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold mt-12 mb-6">Challenge</h2>
                 <p>
                   The main challenge was creating a website that clearly reflects Nolta’s focus on healthy, sustainable, and high-quality products while still feeling modern and approachable. The site needed to communicate Nolta’s premium values and innovation, while presenting technical and environmental details in a simple, engaging way for everyday users.
                 </p>
@@ -114,7 +114,7 @@ export default function NoltaPage() {
             </h2>
           </AnimateOnScroll>
           <AnimateOnScroll animation="fade-in-up">
-            <p className="body-large text-[var(--color-secondary-text)] leading-relaxed text-lg">
+            <p className="text-lg sm:text-xl text-[var(--color-secondary-text)] leading-relaxed">
               The design process focused on creating a clear and intuitive user experience that reflects Nolta’s eco-conscious values and premium quality. Strong information hierarchy and simple navigation were used to help users quickly understand the product range and key benefits. Technical and sustainability details were broken down into easy-to-digest sections to reduce cognitive load. Consistent color, typography, and spacing were applied to build trust and reinforce a sense of quality. High-quality imagery supported decision-making by clearly showcasing product design, materials, and ergonomic features.
             </p>
           </AnimateOnScroll>

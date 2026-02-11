@@ -10,7 +10,7 @@ export default function Home() {
       <Navbar />
 
       {/* Home Section */}
-      <section id="home" className="pt-24 min-h-screen flex items-center justify-center dot-matrix-grid px-4 relative overflow-hidden" aria-label="Hero section">
+      <section id="home" className="pt-32 min-h-screen flex items-center justify-center dot-matrix-grid px-4 relative overflow-hidden" aria-label="Hero section">
         {/* Radial Gradient Background - Top Center */}
         <div
           className="absolute left-0 right-0 pointer-events-none"
@@ -96,7 +96,7 @@ export default function Home() {
                   delay={100 * index}
                 >
                   <article
-                    className={`flex flex-col ${isEven ? "md:flex-row" : "md:flex-row-reverse"
+                    className={`flex flex-col-reverse ${isEven ? "md:flex-row" : "md:flex-row-reverse"
                       } items-center gap-6 sm:gap-8 md:gap-10 lg:gap-12`}
                     itemScope
                     itemType="https://schema.org/CreativeWork"

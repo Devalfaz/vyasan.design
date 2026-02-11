@@ -14,7 +14,7 @@ export default function About() {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="pt-32 pb-16 px-4">
+      <section className="pt-28 sm:pt-32 pb-16 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <AnimateOnScroll animation="fade-in-down">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6">

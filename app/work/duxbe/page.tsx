@@ -26,10 +26,11 @@ export default function DuxbePage() {
 
       {/* Hero - Light */}
       {/* Hero - Light */}
-      <section className="pt-28 px-4 relative overflow-hidden bg-[#F9F7F4]">
+      {/* Hero - Light */}
+      <section className="pt-28 pb-10 px-4 relative overflow-hidden bg-[#F9F7F4]">
         <div className="max-w-5xl mx-auto relative z-10 text-center">
           <AnimateOnScroll animation="fade-in-down">
-            <h2 className="h2-section text-[var(--color-17-17-17)] mb-6">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-[var(--color-17-17-17)] mb-6">
               Reimagining the <span className="text-[var(--color-blue-primary)]">Duxbe</span> Point-
               <br className="hidden sm:block" />
               of-Sale System
@@ -65,12 +66,12 @@ export default function DuxbePage() {
           {/* Main content */}
           <div className="flex-1">
             <AnimateOnScroll animation="fade-in-right">
-              <h2 className="h2-section mb-[36px]">Overview</h2>
-              <div className="space-y-5 text-[#e0e0e0] body-large leading-relaxed">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold mb-[36px]">Overview</h2>
+              <div className="space-y-5 text-[#e0e0e0] text-base sm:text-lg leading-relaxed">
                 <p>
                   Duxbe is a billing solution designed to make everyday billing tasks simpler and easier for businesses. The focus was on creating a clean, user-friendly experience that helps users manage invoices, transactions, and routine billing work without unnecessary complexity.
                 </p>
-                <h3 className="h2-section mt-10 mb-[36px]">Goal</h3>
+                <h3 className="text-xl sm:text-2xl md:text-3xl font-semibold mt-10 mb-[36px]">Goal</h3>
                 <p>
                   While working on this project, the goal was to build a system that feels intuitive and reliable, even for first-time users. By prioritizing usability and clarity,
                 </p>
@@ -348,13 +349,13 @@ export default function DuxbePage() {
       <section className="py-16 sm:py-20 bg-[#f8f8f8] border-t border-[#B3B3B3]">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimateOnScroll animation="fade-in-down">
-            <h2 className="h2-section text-[var(--color-17-17-17)] mb-8 flex items-center gap-3">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-[var(--color-17-17-17)] mb-8 flex items-center gap-3">
               <span className="text-3xl sm:text-4xl">📚</span> Key Learnings
             </h2>
           </AnimateOnScroll>
           <div className="space-y-6 max-w-2xl">
             <AnimateOnScroll animation="fade-in-up">
-              <p className="body-large text-[var(--color-17-17-17)] leading-relaxed">
+              <p className="text-base sm:text-lg text-[var(--color-17-17-17)] leading-relaxed">
                 Through these redesigns, I learned that <span className="font-bold">simplifying content</span> and improving visual hierarchy greatly enhances usability. Clear placement of actions and consistent patterns help users move faster with fewer errors, especially in real-world, high-use scenarios like billing and inventory management.
               </p>
             </AnimateOnScroll>
